@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import logo from '../images/jamstack-paris.svg'
+import logo from '../../images/jamstack-paris.svg'
 
 const Header = ({ siteTitle }) => (
   <div>
