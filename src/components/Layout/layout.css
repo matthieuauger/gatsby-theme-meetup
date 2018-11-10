@@ -7,16 +7,3 @@ body {
 h1, h2 {
   text-align: center;
 }
-
-.date {
-  font-family: 'IBM Plex Sans';
-}
-
-.date-day {
-  color: #F13A59;
-  font-size: 24px;
-}
-
-.date-month {
-  font-size: 20px;
-}

@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from "gatsby"
 
 import Layout from '../components/Layout'
-import MeetupWidget from '../components/MeetupWidget/MeetupWidget'
+import MeetupWidget from '../components/MeetupWidget'
 
 const IndexPage = ({data}) => (
   <Layout>
