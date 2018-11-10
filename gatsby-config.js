@@ -28,7 +28,7 @@ module.exports = {
     {
       resolve: `gatsby-source-meetup`,
       options: {
-        groupUrlName: "paris-js",
+        groupUrlName: "jamstack-paris",
         status: "upcoming",
       },
     },
