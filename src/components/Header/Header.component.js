@@ -1,26 +1,18 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import logo from '../../images/jamstack-paris.svg'
+import StyledHeader from './Header.style'
 
 const Header = ({ siteTitle }) => (
   <div>
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
-      }}
-    >
-    <Link
-      to="/"
-      style={{
-        color: 'white',
-        textDecoration: 'none',
-      }}
-    >
-      <img src={logo} alt="JAMstack.paris logo" width="200" />
-    </Link>
-    </div>
+    <StyledHeader>
+      <Link to="/">
+        <img src={logo} alt="JAMstack.paris logo" />
+      </Link>
+      <ul>
+        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScYo0W4QAkRHLj0fS_TXZXFuSUJ_cRlmyJCeRTPDQVt9RBNog/viewform">Proposer un talk</a></li>
+      </ul>
+    </StyledHeader>
   </div>
 )
 

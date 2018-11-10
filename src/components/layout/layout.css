@@ -1,5 +1,6 @@
 body {
   background-color: #F8F9F4;
+  box-sizing: content-box;
   color: #4A4A4A;
   font-family: 'IBM Plex Sans';
 }
