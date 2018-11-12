@@ -2,10 +2,10 @@ body {
   background-color: #F8F9F4;
   box-sizing: content-box;
   color: #4A4A4A;
-  font-family: 'IBM Plex Sans';
+  font-family: 'IBM Plex Sans', Arial;
 }
 
 h1 {
   text-align: center;
-  font-family: 'IBM Plex Mono';
+  font-family: 'IBM Plex Mono', Arial;
 }
