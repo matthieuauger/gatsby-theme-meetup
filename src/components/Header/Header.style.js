@@ -3,10 +3,12 @@ import styled from 'styled-components'
 const StyledHeader = styled.div`
     margin: 0 auto;
     max-width: 960px;
-    padding: 1.45rem 1.0875rem;
+    padding: 1.45rem 0;
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
+    align-items: center;
+    text-align: center;
 
     img {
         width: 200px;
