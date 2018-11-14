@@ -5,7 +5,6 @@ import { StaticQuery, graphql } from 'gatsby'
 
 import Header from '../Header'
 import './layout.css'
-import '@ibm/plex/css/ibm-plex.min.css'
 
 const Layout = ({ children }) => (
   <StaticQuery
