@@ -9,10 +9,6 @@ const StyledMeetupDate = styled.div`
   border: 1px solid #979797;
   text-align: center;
 
-  span {
-    font-family: 'IBM Plex Sans';
-  }
-
   .date-day {
     color: #F13A59;
     font-size: 24px;

@@ -7,10 +7,7 @@ import MeetupWidget from '../components/MeetupWidget'
 const IndexPage = ({data}) => (
   <Layout>
     <h1>Le meetup bimensuel autour de la JAMstack</h1>
-    {
-      data.meetupGroup.childMeetupEvent.length > 0 &&
-      <MeetupWidget meetupEvent={data.meetupGroup.childMeetupEvent}/>
-    }
+    <MeetupWidget meetupEvent={data.meetupGroup.childMeetupEvent}/>
   </Layout>
 )
 
