@@ -25,6 +25,13 @@ module.exports = {
         icon: 'src/images/jamstack-paris.svg', // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: `gatsby-source-meetup`,
+      options: {
+        groupUrlName: "jamstack-paris",
+        status: "upcoming",
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     'gatsby-plugin-offline',
