@@ -7,3 +7,16 @@ body {
 h1, h2 {
   text-align: center;
 }
+
+.description {
+  margin: 0 auto 20px;
+  max-width: 600px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.6em;
+}
+
+a {
+  color: #F13A59;
+  text-decoration: underline,
+}
