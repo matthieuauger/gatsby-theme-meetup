@@ -6,7 +6,6 @@ import MeetupInfos from './MeetupInfos.component'
 
 const MeetupWidget = ({ meetupEvent }) => (
   <StyledMeetupWidget>
-    <h2>Prochain Meetup</h2>
     <div className="widget-contents">
       <MeetupDate localDate={meetupEvent.local_date}/>
       <MeetupInfos meetupEvent={meetupEvent}/>

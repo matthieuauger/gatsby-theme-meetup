@@ -7,6 +7,7 @@ import StyledMeetupInfos from './MeetupInfos.style'
 
 const MeetupInfos = ({ meetupEvent }) => (
   <StyledMeetupInfos>
+    <h2>Prochain Meetup</h2>
     <p>
       {capitalizeString(format(Date.parse(meetupEvent.local_date), 'dddd Do MMMM YYYY', { locale: frLocale }))}
       &nbsp;—&nbsp;
