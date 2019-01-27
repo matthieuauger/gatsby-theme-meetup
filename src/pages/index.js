@@ -18,11 +18,18 @@ const IndexPage = () => (
             <div>Entrée libre, sur inscription</div>
           </div>
           <div className="next-meetup-informations-basic-place">
-            <div className="next-meetup-informations-basic-highlight">Algolia</div>
-            <div>55 rue d'Amsterdam</div>
+            <div className="next-meetup-informations-basic-highlight">To be announced...</div>
+            <div></div>
             <div>Paris</div>
           </div>
         </div>
+        <div className="next-meetup-informations-talks">
+          <div className="next-meetup-informations-talks-one">Haroen Viaene, JS Library Developper chez Algolia, nous présentera son plugin gatsby-plugin-algolia qui permet d'ajouter simplement la recherche Algolia à votre site Gatsby (talk en anglais 🇬🇧)</div>
+          <div className="next-meetup-informations-talks-two">Matthieu Auger, Lead Developer chez Theodo nous expliquera pourquoi et comment migrer un (gros) blog Wordpress “legacy” vers un tout nouveau blog Gatsby !</div>
+        </div>
+      </div>
+      <div className="next-meetup-subscribe">
+        <a href="#">S'inscrire sur Meetup</a>
       </div>
     </div>
     <h2>Qu'est-ce que JAMstack ?</h2>
