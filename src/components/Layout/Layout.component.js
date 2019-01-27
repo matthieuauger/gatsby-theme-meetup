@@ -30,11 +30,6 @@ const Layout = ({ children }) => (
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
         <div
-          style={{
-            margin: '0 auto',
-            maxWidth: 960,
-            padding: '5% 0 0',
-          }}
         >
           {children}
         </div>
