@@ -35,12 +35,6 @@ module.exports = {
     // To learn more, visit: https://gatsby.app/offline
     'gatsby-plugin-offline',
     {
-      resolve: 'gatsby-plugin-typography',
-      options: {
-        pathToConfigModule: 'src/components/Layout/typography',
-      },
-    },
-    {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
@@ -52,9 +46,9 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ['IBM Plex Mono', 'IBM Plex Sans']
+          families: ['IBM Plex Mono:400,700', 'IBM Plex Sans:400,700']
         }
       }
-    }
+    },
   ],
 }

@@ -2,6 +2,7 @@ body {
   background-color: #fcfcfc;
   box-sizing: content-box;
   color: #4A4A4A;
+  font-family: "IBM Plex Sans", "Avenir Next", sans-serif;
 }
 
 .header-container {
