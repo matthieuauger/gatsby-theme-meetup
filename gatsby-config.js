@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: 'JAMstack.paris website',
@@ -27,13 +31,6 @@ module.exports = {
         gcm_sender_id_comment: "Do not change the GCM Sender ID"
       },
     },
-    {
-      resolve: `gatsby-source-meetup`,
-      options: {
-        groupUrlName: "jamstack-paris",
-        status: "upcoming",
-      },
-    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     'gatsby-plugin-offline',
@@ -43,5 +40,13 @@ module.exports = {
         pathToConfigModule: 'src/components/Layout/typography',
       },
     },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      },
+    },
+    `@contentful/gatsby-transformer-contentful-richtext`,
   ],
 }

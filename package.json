@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "Nicolas Goutay <nicolasgo@theodo.fr>",
   "dependencies": {
+    "@contentful/gatsby-transformer-contentful-richtext": "^13.0.0",
     "date-fns": "^1.29.0",
     "gatsby": "^2.0.61",
     "gatsby-image": "^2.0.15",
@@ -12,8 +13,8 @@
     "gatsby-plugin-react-helmet": "^3.0.0",
     "gatsby-plugin-sharp": "^2.0.12",
     "gatsby-plugin-typography": "^2.2.1",
+    "gatsby-source-contentful": "^2.0.26",
     "gatsby-source-filesystem": "^2.0.4",
-    "gatsby-source-meetup": "^0.0.1",
     "gatsby-transformer-sharp": "^2.1.4",
     "netlify-lambda": "^1.1.0",
     "react": "^16.5.1",
@@ -35,6 +36,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "dotenv": "^6.2.0",
     "prettier": "^1.14.2"
   },
   "repository": {
