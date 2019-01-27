@@ -24,3 +24,50 @@ a {
   color: #F13A59;
   text-decoration: underline,
 }
+
+
+
+.next-meetup {
+  background-color: #F3DBD1;
+}
+
+.next-meetup-informations {
+  display: flex;
+  height: 300px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.next-meetup-name {
+  padding: 30px;
+}
+
+.next-meetup-name h2 {
+  margin: 0;
+}
+
+.next-meetup-informations-basic {
+  width: 35%;
+  border-right: 1px solid #B3B3B3;
+}
+
+.next-meetup-informations-basic-highlight {
+  font-weight: bold;
+}
+
+.next-meetup-informations-basic-date {
+  width: 70%;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.next-meetup-informations-basic-place {
+  width: 70%;
+  margin: auto;
+}
+
+.next-meetup-informations-talks {
+  width: 65%;
+}
