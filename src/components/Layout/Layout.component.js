@@ -27,20 +27,6 @@ const Layout = ({ children }) => (
           ]}
         >
           <html lang="en" />
-          <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
-          <script>
-          {`var OneSignal = window.OneSignal || [];
-          OneSignal.push(function() {
-            OneSignal.init({
-              appId: "58b1ed71-30b9-4ba7-9720-252eedf58b48",
-              autoRegister: false,
-              notifyButton: {
-                enable: true,
-              },
-            });
-            OneSignal.registerForPushNotifications();
-          });`}
-          </script>
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
         <div

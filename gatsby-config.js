@@ -31,13 +31,6 @@ module.exports = {
         gcm_sender_id_comment: "Do not change the GCM Sender ID"
       },
     },
-    {
-      resolve: `gatsby-source-meetup`,
-      options: {
-        groupUrlName: "jamstack-paris",
-        status: "upcoming",
-      },
-    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     'gatsby-plugin-offline',
