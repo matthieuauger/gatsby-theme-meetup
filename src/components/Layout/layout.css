@@ -1,7 +1,11 @@
 body {
-  background-color: #F8F9F4;
+  background-color: #fcfcfc;
   box-sizing: content-box;
   color: #4A4A4A;
+}
+
+.header-container {
+  padding: 20px 60px;
 }
 
 h1, h2 {
