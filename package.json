@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "Nicolas Goutay <nicolasgo@theodo.fr>",
   "dependencies": {
+    "@contentful/gatsby-transformer-contentful-richtext": "^13.0.0",
     "date-fns": "^1.29.0",
     "gatsby": "^2.0.61",
     "gatsby-image": "^2.0.15",
@@ -36,6 +37,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "dotenv": "^6.2.0",
     "prettier": "^1.14.2"
   },
   "repository": {

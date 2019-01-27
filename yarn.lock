@@ -591,6 +591,13 @@
   dependencies:
     regenerator-runtime "^0.12.0"
 
+"@babel/runtime@^7.2.0":
+  version "7.3.1"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.3.1.tgz#574b03e8e8a9898eaf4a872a92ea20b7846f6f2a"
+  integrity sha512-7jGW8ppV0ant637pIqAcFfQDDH1orEPGJb8aXfUozuCU3QqX7rX4DA8iwrbPrR1hcH0FTTHz47yQnk+bl5xHQA==
+  dependencies:
+    regenerator-runtime "^0.12.0"
+
 "@babel/template@^7.1.0", "@babel/template@^7.1.2":
   version "7.1.2"
   resolved "https://registry.yarnpkg.com/@babel/template/-/template-7.1.2.tgz#090484a574fef5a2d2d7726a674eceda5c5b5644"
@@ -628,6 +635,36 @@
   dependencies:
     follow-redirects "^1.2.5"
     is-buffer "^1.1.5"
+
+"@contentful/gatsby-transformer-contentful-richtext@^13.0.0":
+  version "13.0.0"
+  resolved "https://registry.yarnpkg.com/@contentful/gatsby-transformer-contentful-richtext/-/gatsby-transformer-contentful-richtext-13.0.0.tgz#62b2028b4ac7753dd45d774d8b2b5a502ef3f3ec"
+  integrity sha512-KYwUzbGZWbrU0viKpfTAYL/UhPp+yj/oNlMt4HsJ4/FOh+09aCHozDkUmmmmlzHYh+Nzyrl7DpGuCHaiuFdmwA==
+  dependencies:
+    "@babel/runtime" "^7.2.0"
+    "@contentful/rich-text-html-renderer" "^13.0.0"
+    "@contentful/rich-text-plain-text-renderer" "^13.0.0"
+    lodash.words "^4.2.0"
+
+"@contentful/rich-text-html-renderer@^13.0.0":
+  version "13.0.0"
+  resolved "https://registry.yarnpkg.com/@contentful/rich-text-html-renderer/-/rich-text-html-renderer-13.0.0.tgz#659b8f3af2476588ba6d02944be5d16ecb676a4b"
+  integrity sha512-gUhEjNyU/QR36+RsJ7/N+IaqJbQ9GiTezNRpF2NztOILdyjxplIbTt3HN5Yo99DT9K+qs8GbFV43EsIxbWgVjA==
+  dependencies:
+    "@contentful/rich-text-types" "^13.0.0"
+    escape-html "^1.0.3"
+
+"@contentful/rich-text-plain-text-renderer@^13.0.0":
+  version "13.0.0"
+  resolved "https://registry.yarnpkg.com/@contentful/rich-text-plain-text-renderer/-/rich-text-plain-text-renderer-13.0.0.tgz#b6e96c98611572a50c3b581e6429b6536ab4fc8f"
+  integrity sha512-NCWNdIZRaXq9zbXj75qctuaZTc3K+J9L1jcZLAjxXS0M85xh9W3mpPcY4Xcz+OkYbQesUFaAEqFVu8y05d4xSQ==
+  dependencies:
+    "@contentful/rich-text-types" "^13.0.0"
+
+"@contentful/rich-text-types@^13.0.0":
+  version "13.0.0"
+  resolved "https://registry.yarnpkg.com/@contentful/rich-text-types/-/rich-text-types-13.0.0.tgz#22daa89b551980edc81ef277f7e929c7b5551cfb"
+  integrity sha512-1+a/WAFVBZl1tJb4J7nHZxbqde1CqwLYE+xtpqO8Pqr5zOgVV4MJHzA2t7SDYc/ypJIoNL0W8yEUNgf43iFL/Q==
 
 "@emotion/is-prop-valid@^0.6.8":
   version "0.6.8"
@@ -3419,6 +3456,11 @@ dotenv@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-4.0.0.tgz#864ef1379aced55ce6f95debecdce179f7a0cd1d"
 
+dotenv@^6.2.0:
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-6.2.0.tgz#941c0410535d942c8becf28d3f357dbd9d476064"
+  integrity sha512-HygQCKUBSFl8wKQZBSemMywRWcEDNidvNbjGVyZu3nbZ8qq9ubiPoGLMdRDpfSrpkkm9BXYFkpKxxFX38o/76w==
+
 download@^6.2.2:
   version "6.2.5"
   resolved "https://registry.yarnpkg.com/download/-/download-6.2.5.tgz#acd6a542e4cd0bb42ca70cfc98c9e43b07039714"
@@ -3657,7 +3699,7 @@ es6-weak-map@^2.0.2:
     es6-iterator "^2.0.1"
     es6-symbol "^3.1.1"
 
-escape-html@~1.0.3:
+escape-html@^1.0.3, escape-html@~1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/escape-html/-/escape-html-1.0.3.tgz#0258eae4d3d0c0974de1c169188ef0051d1d1988"
 
@@ -6401,6 +6443,11 @@ lodash.toarray@^4.4.0:
 lodash.uniq@^4.5.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
+
+lodash.words@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/lodash.words/-/lodash.words-4.2.0.tgz#5ecfeaf8ecf8acaa8e0c8386295f1993c9cf4036"
+  integrity sha1-Xs/q+Oz4rKqODIOGKV8Zk8nPQDY=
 
 lodash@^4.11.1, lodash@^4.13.1, lodash@^4.15.0, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.3.0:
   version "4.17.11"
