@@ -29,7 +29,7 @@ const IndexPage = () => (
         </div>
       </div>
       <div className="next-meetup-subscribe">
-        <a href="#">S'inscrire sur Meetup</a>
+        <a href="https://www.meetup.com/fr-FR/JAMstack-paris/events/257983707/">S'inscrire sur Meetup</a>
       </div>
     </div>
     <h2>Qu'est-ce que JAMstack ?</h2>
