@@ -1,13 +1,14 @@
 import React from 'react'
+import { graphql } from "gatsby"
 
 import Footer from '../components/Footer'
 import Layout from '../components/Layout'
 import Meetup from '../components/Meetup'
 
-const IndexPage = () => (
+const IndexPage = ({data}) => (
   <Layout>
     <h1>Le meetup bimensuel autour de la JAMstack</h1>
-    <Meetup />
+    <Meetup meetupInfo={data.contentfulUpcomingMeetup} />
     <h2>Qu'est-ce que JAMstack ?</h2>
     <p className="description">
       C'est du Javascript, des APIs, et du Markup.
@@ -21,5 +22,25 @@ const IndexPage = () => (
     <Footer />
   </Layout>
 )
+
+
+export const query = graphql`
+  query {
+    contentfulUpcomingMeetup {
+      title
+      date
+      edition
+      addressCompanyName
+      addressStreetAddress
+      addressCity
+      meetupUrl
+      description {
+        childContentfulRichText {
+          html
+        }
+      }
+    }
+  }
+`
 
 export default IndexPage

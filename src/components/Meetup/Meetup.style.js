@@ -42,17 +42,7 @@ const StyledMeetup = styled.div`
   }
 
   .meetup-informations-talks {
-    width: 65%;
-  }
-
-  .meetup-informations-talks-one {
-    width: 80%;
-    margin: auto;
-    margin-bottom: 30px;
-  }
-
-  .meetup-informations-talks-two {
-    width: 80%;
+    width: 55%;
     margin: auto;
   }
 
@@ -67,6 +57,7 @@ const StyledMeetup = styled.div`
     font-size: 1.3rem;
     color: #4A4A4A;
     text-decoration: none;
+    font-weight: bold;
     border: 4px solid #ED1C40;
     margin-left: auto;
   }
