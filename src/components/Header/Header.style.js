@@ -16,13 +16,14 @@ const StyledHeader = styled.div`
     }
 
     .app-name {
+        font-family: "IBM Plex Mono";
         font-size: 40px;
         font-weight: bold;
         line-height: 52px;
     }
 
     .app-name-classic {
-        color: #4A4A4A;
+        color: #333333;
     }
 
     .app-name-highlight {
