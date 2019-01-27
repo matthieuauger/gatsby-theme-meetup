@@ -48,5 +48,13 @@ module.exports = {
       },
     },
     `@contentful/gatsby-transformer-contentful-richtext`,
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: ['IBM Plex Mono', 'IBM Plex Sans']
+        }
+      }
+    }
   ],
 }
