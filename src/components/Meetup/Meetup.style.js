@@ -5,6 +5,7 @@ const StyledMeetup = styled.div`
   padding-top: 15px;
   padding-bottom: 30px;
   margin-bottom: 30px;
+  margin-top: 50px;
 
   .meetup-informations {
     display: flex;
@@ -44,6 +45,16 @@ const StyledMeetup = styled.div`
   .meetup-informations-talks {
     width: 55%;
     margin: auto;
+  }
+
+  .meetup-informations-talks a {
+    font-weight: bold;
+    box-shadow: rgb(237, 28, 64, .4) 0px -5px 0px inset;
+    transition: box-shadow 0.3s ease-in-out 0s;
+  }
+
+  a:hover {
+    box-shadow: rgb(237, 28, 64, .4) 0px -28px 0px inset;
   }
 
   .meetup-subscribe {

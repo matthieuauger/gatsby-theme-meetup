@@ -11,6 +11,7 @@ body {
 
 h1, h2 {
   text-align: center;
+  margin-top: 0;
 }
 
 .description {
@@ -22,7 +23,14 @@ h1, h2 {
 }
 
 a {
-  color: #F13A59;
-  text-decoration: underline,
+  color: #4A4A4A;
+  cursor: pointer;
 }
 
+:any-link {
+  text-decoration: none;
+}
+
+:any-link:active {
+  text-decoration: none;
+}
