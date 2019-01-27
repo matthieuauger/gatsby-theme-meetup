@@ -4,21 +4,32 @@ import { graphql } from "gatsby"
 import Footer from '../components/Footer'
 import Layout from '../components/Layout'
 import Meetup from '../components/Meetup'
+import TextBlock from '../components/TextBlock'
+
+/**
+ * TextBlock types come from Contentful
+ */
+const ALL_TEXT_BLOCK_TYPES = {
+  WHAT_IS_JAMSTACK: 'what-is-jamstack',
+  SUBMIT_A_TALK: 'submit-a-talk',
+}
 
 const IndexPage = ({data}) => (
   <Layout>
     <h1>Le meetup bimensuel autour de la JAMstack</h1>
     <Meetup meetupInfo={data.contentfulUpcomingMeetup} />
-    <h2>Qu'est-ce que JAMstack ?</h2>
-    <p className="description">
-      C'est du Javascript, des APIs, et du Markup.
-    </p>
-    <p className="description">
-      Un mélange détonnant entre les sites statiques “à l'ancienne”
-      et les technos récentes comme React et GraphQL qui permet
-      de concevoir des sites super rapides, super rapidement !
-    </p>
-    <p className="description">Plus d'infos : <a href="https://jamstack.org">https://jamstack.org</a></p>
+    <TextBlock textBlockInfo={
+      data.allContentfulTextBlock.edges
+      .filter((edge) => edge.node.type === ALL_TEXT_BLOCK_TYPES.WHAT_IS_JAMSTACK)
+      [0]
+      .node
+    }/>
+    <TextBlock textBlockInfo={
+      data.allContentfulTextBlock.edges
+      .filter((edge) => edge.node.type === ALL_TEXT_BLOCK_TYPES.SUBMIT_A_TALK)
+      [0]
+      .node
+    }/>
     <Footer />
   </Layout>
 )
@@ -37,6 +48,22 @@ export const query = graphql`
       description {
         childContentfulRichText {
           html
+        }
+      }
+    }
+    allContentfulTextBlock {
+      edges {
+        node {
+          type
+          title
+          content {
+            childContentfulRichText {
+              html
+            }
+          }
+          callToActionText
+          isLinkInternal
+          callToActionUrl
         }
       }
     }

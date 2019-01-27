@@ -36,18 +36,20 @@ const Meetup = ({meetupInfo}) => (
 )
 
 Meetup.propTypes = {
-  title: PropTypes.string.isRequired,
-  edition: PropTypes.number.isRequired,
-  addressCompanyName: PropTypes.string.isRequired,
-  addressStreetAddress: PropTypes.string.isRequired,
-  addressCity: PropTypes.string.isRequired,
-  meetupUrl: PropTypes.string.isRequired,
-  date: PropTypes.string.isRequired,
-  description: PropTypes.shape({
-    childContentfulRichText: PropTypes.shape({
-      html: PropTypes.string.isRequired,
-    }).isRequired
-  }).isRequired,
+  meetupInfo: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    edition: PropTypes.number.isRequired,
+    addressCompanyName: PropTypes.string.isRequired,
+    addressStreetAddress: PropTypes.string.isRequired,
+    addressCity: PropTypes.string.isRequired,
+    meetupUrl: PropTypes.string.isRequired,
+    date: PropTypes.string.isRequired,
+    description: PropTypes.shape({
+      childContentfulRichText: PropTypes.shape({
+        html: PropTypes.string.isRequired,
+      }).isRequired
+    }).isRequired,
+  }).isRequired
 }
 
 export default Meetup

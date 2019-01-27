@@ -53,7 +53,7 @@ const StyledMeetup = styled.div`
     transition: box-shadow 0.3s ease-in-out 0s;
   }
 
-  a:hover {
+  .meetup-informations-talks a:hover {
     box-shadow: rgb(237, 28, 64, .4) 0px -28px 0px inset;
   }
 
