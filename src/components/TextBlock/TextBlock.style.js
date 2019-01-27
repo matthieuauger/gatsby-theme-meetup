@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const StyledTextBlock = styled.div`
-  max-width: 50%;
+  max-width: 55%;
   margin: auto;
   margin-top: 50px;
   font-size: 20px;
@@ -11,6 +11,7 @@ const StyledTextBlock = styled.div`
   h2 {
     font-weight: normal;
     margin-bottom: 40px;
+    text-align: center;
   }
 
   a {
@@ -24,6 +25,7 @@ const StyledTextBlock = styled.div`
   }
 
   .call-to-action__neutral {
+    margin-top: 50px;
     display: flex;
     padding: 0 60px;
   }

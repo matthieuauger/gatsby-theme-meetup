@@ -13,9 +13,17 @@ const Meetup = ({meetupInfo, meetupType, backgroundColor}) => (
         <div className="meetup-informations-basic">
           <div className="meetup-informations-basic-date">
             {/* TODO: hookup the real date with meetupInfo.date (needs parsing)*/}
-            <div className="meetup-informations-basic-highlight">Mercredi 27 Février</div>
+            <div className="meetup-informations-basic-highlight">
+              {
+                meetupType === 'UPCOMING' ? `Mercredi 27 Février` : `Mardi 18 décembre 2018`
+              }
+            </div>
             <div>19h</div>
-            <div>Entrée libre, sur inscription</div>
+            <div>
+              {
+                meetupType === 'UPCOMING' ? `Entrée libre, sur inscription` : `47 participants`
+              }
+            </div>
           </div>
           <div className="meetup-informations-basic-place">
             <div className="meetup-informations-basic-highlight">{meetupInfo.addressCompanyName}</div>
