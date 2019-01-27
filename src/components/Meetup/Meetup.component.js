@@ -3,9 +3,9 @@ import StyledMeetup from './Meetup.style'
 
 import PropTypes from "prop-types"
 
-const Meetup = ({meetupInfo}) => (
+const Meetup = ({meetupInfo, meetupType, backgroundColor}) => (
   <div className="meetup-container">
-    <StyledMeetup>
+    <StyledMeetup backgroundColor={backgroundColor}>
       <div className="meetup-name">
         <h2>JAMstack.paris #{meetupInfo.edition} – {meetupInfo.title}</h2>
       </div>
@@ -28,9 +28,16 @@ const Meetup = ({meetupInfo}) => (
           dangerouslySetInnerHTML={{__html: meetupInfo.description.childContentfulRichText.html}}
         />
       </div>
-      <div className="meetup-subscribe">
-        <a href={meetupInfo.meetupUrl}>S'inscrire sur Meetup →</a>
-      </div>
+      { meetupType === 'UPCOMING' &&
+        <div className="meetup-subscribe">
+          <a href={meetupInfo.meetupUrl}>S'inscrire sur Meetup →</a>
+        </div>
+      }
+      { meetupType === 'PAST' &&
+        <div className="meetup-subscribe">
+          <a href="https://www.youtube.com/channel/UC66eQOycjMnaqzpbRUhEK2w">Voir les vidéos →</a>
+        </div>
+      }
     </StyledMeetup>
   </div>
 )
@@ -49,7 +56,9 @@ Meetup.propTypes = {
         html: PropTypes.string.isRequired,
       }).isRequired
     }).isRequired,
-  }).isRequired
+  }).isRequired,
+  meetupType: PropTypes.string.isRequired,
+  backgroundColor: PropTypes.string.isRequired,
 }
 
 export default Meetup

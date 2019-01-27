@@ -1,11 +1,13 @@
+import React from 'react';
 import styled from 'styled-components'
 
 const StyledMeetup = styled.div`
-  background-color: #F3DBD1;
+  ${(props) => `
+    background-color: ${props.backgroundColor};
+  `};
   padding-top: 15px;
   padding-bottom: 30px;
   margin-bottom: 30px;
-  margin-top: 50px;
 
   .meetup-informations {
     display: flex;
@@ -17,8 +19,9 @@ const StyledMeetup = styled.div`
   .meetup-name {
     padding: 30px;
   }
-
+  
   .meetup-name h2 {
+    text-align: center;
     margin: 0;
   }
 
@@ -79,4 +82,4 @@ const StyledMeetup = styled.div`
   }
 `
 
-export default StyledMeetup
+export default (props) => <StyledMeetup {...props} />;

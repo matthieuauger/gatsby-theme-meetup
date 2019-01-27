@@ -6,6 +6,7 @@ const StyledTextBlock = styled.div`
   margin-top: 50px;
   font-size: 20px;
   line-height: 1.3em;
+  margin-bottom: 50px;
   
   h2 {
     font-weight: normal;
