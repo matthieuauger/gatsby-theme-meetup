@@ -71,6 +71,7 @@ const StyledMeetup = styled.div`
 
   @media screen and (max-width: 600px) {
     padding: 0 30px 30px;
+    margin-bottom: 0;
 
     .meetup-informations {
       flex-direction: column;

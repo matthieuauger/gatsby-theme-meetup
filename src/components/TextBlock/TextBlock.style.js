@@ -33,6 +33,26 @@ const StyledTextBlock = styled.div`
   .call-to-action a {
     margin: auto;
   }
+
+  @media screen and (max-width: 600px) {
+    max-width: none;
+    padding: 30px;
+    margin: 0;
+  }
+
+  .call-to-action {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .call-to-action a {
+    padding: 10px 35px;
+    width: 100%;
+    font-size: 1.1rem;
+    text-align: center;
+    line-height: 34px;
+  }
 `
 
 export default StyledTextBlock
