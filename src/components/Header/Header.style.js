@@ -72,6 +72,7 @@ const StyledHeader = styled.div`
       margin-block-start: 0;
       padding-inline-start: 0;
       margin: 0;
+      width: 100%;
     }
 
     li {

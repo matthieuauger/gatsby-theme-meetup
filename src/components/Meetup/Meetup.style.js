@@ -70,10 +70,11 @@ const StyledMeetup = styled.div`
   }
 
   @media screen and (max-width: 600px) {
-    padding: 0 30px;
+    padding: 0 30px 30px;
 
     .meetup-informations {
       flex-direction: column;
+      margin-bottom: 0;
     }
 
     .meetup-informations-basic {
@@ -100,6 +101,19 @@ const StyledMeetup = styled.div`
     .meetup-informations-talks p {
       border-bottom: 1px solid #b3b3b3;
       padding-bottom: 20px;
+    }
+
+    .meetup-subscribe {
+      width: 100%;
+      padding: 0;
+    }
+
+    .meetup-subscribe a {
+      padding: 10px 35px;
+      width: 100%;
+      font-size: 1.1rem;
+      text-align: center;
+      line-height: 34px;
     }
   }
 `
