@@ -12,7 +12,9 @@ const StyledHeader = styled.div`
     margin-bottom: 20px;
 
     .logo {
-        width: 200px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
     }
 
     .app-name {
@@ -20,6 +22,7 @@ const StyledHeader = styled.div`
         font-size: 40px;
         font-weight: bold;
         line-height: 52px;
+        margin-left: 50px;
     }
 
     .app-name-classic {
@@ -48,6 +51,40 @@ const StyledHeader = styled.div`
         font-size: 26px;
         font-weight: bold;
         line-height: 34px;
+    }
+
+    @media screen and (max-width: 600px) {
+        flex-direction: column;
+
+        .logo {
+            margin-bottom: 20px;
+        }
+
+        .app-name {
+            font-size: 30px;
+            font-weight: bold;
+            line-height: 35px;
+            margin-left: 10px
+        }
+
+        ul {
+            flex-direction: column;
+            margin-block-start: 0;
+            padding-inline-start: 0;
+            margin: 0;
+        }
+
+        li {
+            margin-left: 0;
+            margin-bottom: 10px;
+        }
+
+        li a {
+            padding: 10px 35px;
+            width: auto;
+            font-size: 1.1rem;
+            text-align: center;
+        }
     }
 `
 

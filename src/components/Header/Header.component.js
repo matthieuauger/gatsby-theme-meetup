@@ -11,11 +11,11 @@ const Header = ({ siteTitle }) => (
         <Link to="/">
           <img src={logo} alt="JAMstack.paris logo" />
         </Link>
-      </div>
-      <div className="app-name">
-        <div className="app-name-classic">JAMstack</div>
-        <div className="app-name-classic">Paris</div>
-        <div className="app-name-highlight">Meetup</div>
+        <div className="app-name">
+          <div className="app-name-classic">JAMstack</div>
+          <div className="app-name-classic">Paris</div>
+          <div className="app-name-highlight">Meetup</div>
+        </div>
       </div>
       <ul>
         <li>
