@@ -7,7 +7,7 @@ const StyledTextBlock = styled.div`
   font-size: 20px;
   line-height: 1.3em;
   margin-bottom: 50px;
-  
+
   h2 {
     font-weight: normal;
     margin-bottom: 40px;
@@ -16,12 +16,12 @@ const StyledTextBlock = styled.div`
 
   .text-block-content a {
     font-weight: bold;
-    box-shadow: rgb(237, 28, 64, .4) 0px -6px 0px inset;
+    box-shadow: rgb(237, 28, 64, 0.4) 0px -6px 0px inset;
     transition: box-shadow 0.3s ease-in-out 0s;
   }
 
   .text-block-content a:hover {
-    box-shadow: rgb(237, 28, 64, .4) 0px -24px 0px inset;
+    box-shadow: rgb(237, 28, 64, 0.4) 0px -24px 0px inset;
   }
 
   .call-to-action {
@@ -32,6 +32,26 @@ const StyledTextBlock = styled.div`
 
   .call-to-action a {
     margin: auto;
+  }
+
+  @media screen and (max-width: 600px) {
+    max-width: none;
+    padding: 30px;
+    margin: 0;
+  }
+
+  .call-to-action {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .call-to-action a {
+    padding: 10px 35px;
+    width: 100%;
+    font-size: 1.1rem;
+    text-align: center;
+    line-height: 34px;
   }
 `
 

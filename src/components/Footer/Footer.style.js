@@ -21,6 +21,15 @@ const StyledFooter = styled.div`
   a:hover {
     box-shadow: rgb(237, 28, 64, 0.4) 0px -24px 0px inset;
   }
+
+  @media screen and (max-width: 600px) {
+    margin: 0;
+    padding: 30px;
+
+    p {
+      margin-top: 0;
+    }
+  }
 `
 
 export default StyledFooter

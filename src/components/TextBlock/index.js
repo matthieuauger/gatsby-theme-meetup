@@ -1,1 +1,1 @@
-export { default } from './TextBlock.component';
+export { default } from './TextBlock.component'
