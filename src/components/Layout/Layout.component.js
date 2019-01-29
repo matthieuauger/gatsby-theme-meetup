@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
+import favicon from '../../images/favicon-16x16.png';
 
 import Header from '../Header'
 import './layout.css'
@@ -22,8 +23,11 @@ const Layout = ({ children }) => (
         <Helmet
           title={data.site.siteMetadata.title}
           meta={[
-            { name: 'description', content: 'JAMstack.paris website' },
+            { name: 'description', content: 'JAMstack.paris' },
             { name: 'keywords', content: 'JAMstack, paris' },
+          ]}
+          link={[
+            { rel: 'shortcut icon', type: 'image/png', href: `${favicon}` }
           ]}
         >
           <html lang="en" />

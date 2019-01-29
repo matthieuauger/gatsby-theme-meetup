@@ -1,6 +1,6 @@
 {
-  "name": "jamstack-paris-website",
-  "description": "JAMstack.paris website",
+  "name": "jamstack-paris",
+  "description": "JAMstack.paris",
   "version": "1.0.0",
   "author": "Nicolas Goutay <nicolasgo@theodo.fr>",
   "dependencies": {
@@ -24,7 +24,9 @@
     "styled-components": "^4.0.3"
   },
   "keywords": [
-    "JAMstack"
+    "JAMstack",
+    "meetup",
+    "paris"
   ],
   "license": "MIT",
   "scripts": {
