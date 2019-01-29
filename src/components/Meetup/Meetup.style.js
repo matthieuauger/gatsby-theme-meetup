@@ -68,6 +68,40 @@ const StyledMeetup = styled.div`
   .meetup-subscribe a {
     margin-left: auto;
   }
+
+  @media screen and (max-width: 600px) {
+    padding: 0 30px;
+    
+    .meetup-informations {
+      flex-direction: column;
+    }
+
+    .meetup-informations-basic {
+      width: auto;
+      border-right: none;
+    }
+  
+    .meetup-informations-basic-date {
+      width: auto;
+      border-bottom: 1px solid #B3B3B3;
+      padding-bottom: 20px;
+    }
+  
+    .meetup-informations-basic-place {
+      width: auto;
+      border-bottom: 1px solid #B3B3B3;
+      padding-bottom: 20px;
+    }
+  
+    .meetup-informations-talks {
+      width: auto;
+    }
+
+    .meetup-informations-talks p {
+      border-bottom: 1px solid #B3B3B3;
+      padding-bottom: 20px;
+    }
+  }
 `
 
 export default (props) => <StyledMeetup {...props} />;
