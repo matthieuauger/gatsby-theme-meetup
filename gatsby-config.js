@@ -4,7 +4,7 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: 'JAMstack.paris website',
+    title: 'JAMstack.paris',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -20,7 +20,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'JAMstack.paris Website',
+        name: 'JAMstack.paris',
         short_name: 'JAMstack.paris',
         start_url: '/',
         background_color: '#F8F9F4',
