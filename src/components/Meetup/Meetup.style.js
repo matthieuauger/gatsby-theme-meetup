@@ -52,12 +52,12 @@ const StyledMeetup = styled.div`
 
   .meetup-informations-talks a {
     font-weight: bold;
-    box-shadow: rgb(237, 28, 64, 0.4) 0px -5px 0px inset;
+    box-shadow: rgba(237, 28, 64, 0.4) 0px -5px 0px inset;
     transition: box-shadow 0.3s ease-in-out 0s;
   }
 
   .meetup-informations-talks a:hover {
-    box-shadow: rgb(237, 28, 64, 0.4) 0px -28px 0px inset;
+    box-shadow: rgba(237, 28, 64, 0.4) 0px -28px 0px inset;
   }
 
   .meetup-subscribe {

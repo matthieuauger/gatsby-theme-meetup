@@ -16,12 +16,12 @@ const StyledTextBlock = styled.div`
 
   .text-block-content a {
     font-weight: bold;
-    box-shadow: rgb(237, 28, 64, 0.4) 0px -6px 0px inset;
+    box-shadow: rgba(237, 28, 64, 0.4) 0px -6px 0px inset;
     transition: box-shadow 0.3s ease-in-out 0s;
   }
 
   .text-block-content a:hover {
-    box-shadow: rgb(237, 28, 64, 0.4) 0px -24px 0px inset;
+    box-shadow: rgba(237, 28, 64, 0.4) 0px -24px 0px inset;
   }
 
   .call-to-action {
