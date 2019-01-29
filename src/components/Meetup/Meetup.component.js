@@ -1,6 +1,8 @@
 import React from 'react'
 import StyledMeetup from './Meetup.style'
 
+import Button from '../Button'
+
 import PropTypes from "prop-types"
 
 const Meetup = ({meetupInfo, meetupType, backgroundColor}) => (
@@ -37,14 +39,14 @@ const Meetup = ({meetupInfo, meetupType, backgroundColor}) => (
         />
       </div>
       { meetupType === 'UPCOMING' &&
-        <div className="meetup-subscribe">
-          <a href={meetupInfo.meetupUrl}>S'inscrire sur Meetup →</a>
-        </div>
+        (<div className="meetup-subscribe">
+          <Button url={meetupInfo.meetupUrl} text="S'inscrire sur Meetup →" type="primary" />
+        </div>)
       }
       { meetupType === 'PAST' &&
-        <div className="meetup-subscribe">
-          <a href="https://www.youtube.com/channel/UC66eQOycjMnaqzpbRUhEK2w">Voir les vidéos →</a>
-        </div>
+        (<div className="meetup-subscribe">
+          <Button url="https://www.youtube.com/channel/UC66eQOycjMnaqzpbRUhEK2w" text="Voir les vidéos →" type="neutral" />
+        </div>)
       }
     </StyledMeetup>
   </div>

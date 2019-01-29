@@ -14,36 +14,24 @@ const StyledTextBlock = styled.div`
     text-align: center;
   }
 
-  a {
+  .text-block-content a {
     font-weight: bold;
     box-shadow: rgb(237, 28, 64, .4) 0px -6px 0px inset;
     transition: box-shadow 0.3s ease-in-out 0s;
   }
 
-  a:hover {
+  .text-block-content a:hover {
     box-shadow: rgb(237, 28, 64, .4) 0px -24px 0px inset;
   }
 
-  .call-to-action__neutral {
+  .call-to-action {
     margin-top: 50px;
     display: flex;
     padding: 0 60px;
   }
 
-  .call-to-action__neutral a {
-    display: block;
-    padding: 18px 48px;
-    font-size: 1.3rem;
-    color: #333333;
-    text-decoration: none;
-    border: 4px solid #333333;
+  .call-to-action a {
     margin: auto;
-    box-shadow: none;
-  }
-
-  .call-to-action__neutral a:hover {
-    background-color: #333333;
-    color: #FCFCFC; 
   }
 `
 

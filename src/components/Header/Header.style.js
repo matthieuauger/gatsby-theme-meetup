@@ -49,31 +49,6 @@ const StyledHeader = styled.div`
         font-weight: bold;
         line-height: 34px;
     }
-
-    li a {
-        display: block;
-        padding: 18px 48px;
-        font-size: 1.3rem;
-        color: #4A4A4A;
-        text-decoration: none;
-        border: 4px solid #333333;
-    }
-
-    li.menu-item-highlight a {
-        border: 4px solid #ED1C40;
-    }
-
-    li:hover {
-        background-color: #333333;
-    }
-
-    li:hover a {
-        color: #FCFCFC; 
-    }
-
-    li.menu-item-highlight:hover {
-        background-color: #ED1C40;
-    }
 `
 
 export default StyledHeader

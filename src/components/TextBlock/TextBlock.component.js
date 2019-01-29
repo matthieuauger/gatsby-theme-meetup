@@ -1,7 +1,9 @@
 import React from 'react'
+import PropTypes from "prop-types"
 import StyledTextBlock from './TextBlock.style'
 
-import PropTypes from "prop-types"
+import Button from '../Button'
+
 
 const TextBlock = ({textBlockInfo}) => (
   <div className="text-block-container">
@@ -17,8 +19,8 @@ const TextBlock = ({textBlockInfo}) => (
           && textBlockInfo.isLinkInternal !== null
           && textBlockInfo.callToActionUrl !== null
         ) && (
-          <div className="call-to-action__neutral">
-            <a href={textBlockInfo.callToActionUrl}>{textBlockInfo.callToActionText}</a>
+          <div className="call-to-action">
+            <Button url={textBlockInfo.callToActionUrl} text={textBlockInfo.callToActionText} type="neutral" />
           </div>
         )
       }

@@ -66,19 +66,7 @@ const StyledMeetup = styled.div`
   }
 
   .meetup-subscribe a {
-    display: block;
-    padding: 18px 48px;
-    font-size: 1.3rem;
-    color: #4A4A4A;
-    text-decoration: none;
-    font-weight: bold;
-    border: 4px solid #ED1C40;
     margin-left: auto;
-  }
-
-  .meetup-subscribe a:hover {
-    background-color: #ED1C40;
-    color: #FCFCFC; 
   }
 `
 
