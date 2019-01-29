@@ -71,6 +71,7 @@ const StyledHeader = styled.div`
       flex-direction: column;
       margin-block-start: 0;
       padding-inline-start: 0;
+      -webkit-padding-start: 0;
       margin: 0;
       width: 100%;
     }
@@ -81,7 +82,7 @@ const StyledHeader = styled.div`
     }
 
     li a {
-      padding: 10px 35px;
+      padding: 10px 20px;
       width: auto;
       font-size: 1.1rem;
       text-align: center;

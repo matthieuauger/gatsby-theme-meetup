@@ -110,7 +110,7 @@ const StyledMeetup = styled.div`
     }
 
     .meetup-subscribe a {
-      padding: 10px 35px;
+      padding: 10px 20px;
       width: 100%;
       font-size: 1.1rem;
       text-align: center;
