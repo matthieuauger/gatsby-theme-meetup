@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 
 const StyledButton = styled.a`
-  ${({type}) => {
-    const primaryColor = '#ED1C40';
-    const lightGrey = "#4A4A4A";
-    const strongGrey = "#333333";
-    const lightColor = "#FCFCFC";
+  ${({ type }) => {
+    const primaryColor = '#ED1C40'
+    const lightGrey = '#4A4A4A'
+    const strongGrey = '#333333'
+    const lightColor = '#FCFCFC'
 
     const colorScheme = {
       primary: {
@@ -15,7 +15,7 @@ const StyledButton = styled.a`
       neutral: {
         borderColor: strongGrey,
         hoverBackgroundColor: strongGrey,
-      }
+      },
     }
     return `
     {
@@ -33,7 +33,8 @@ const StyledButton = styled.a`
       background-color: ${colorScheme[type].hoverBackgroundColor};
       color: ${lightColor}; 
     }
-  `}};
+  `
+  }};
 `
 
 export default StyledButton

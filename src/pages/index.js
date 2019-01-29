@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from "gatsby"
+import { graphql } from 'gatsby'
 
 import Footer from '../components/Footer'
 import Layout from '../components/Layout'
@@ -14,15 +14,11 @@ const ALL_TEXT_BLOCK_TYPES = {
   SUBMIT_A_TALK: 'submit-a-talk',
 }
 
-let currentMeetupColor = "#F3DBD1"
+let currentMeetupColor = '#F3DBD1'
 
-let pastMeetupColors = [
-  "#DDDEC4",
-  "#E6BB91",
-  "#EFCC74",
-]
+let pastMeetupColors = ['#DDDEC4', '#E6BB91', '#EFCC74']
 
-const IndexPage = ({data}) => (
+const IndexPage = ({ data }) => (
   <Layout>
     <h1>Le meetup bimestriel autour de la JAMstack</h1>
     <h2>Prochain Meetup</h2>
@@ -31,36 +27,35 @@ const IndexPage = ({data}) => (
       meetupType="UPCOMING"
       backgroundColor={currentMeetupColor}
     />
-    <TextBlock textBlockInfo={
-      data.allContentfulTextBlock.edges
-      .filter(
-        (edge) => edge.node.type === ALL_TEXT_BLOCK_TYPES.WHAT_IS_JAMSTACK
-      )[0].node
-    }/>
+    <TextBlock
+      textBlockInfo={
+        data.allContentfulTextBlock.edges.filter(
+          edge => edge.node.type === ALL_TEXT_BLOCK_TYPES.WHAT_IS_JAMSTACK
+        )[0].node
+      }
+    />
     <h2>Meetups précédents</h2>
-    {
-      data.allContentfulPastMeetup.edges.map((pastMeetupEdge, index) => {
-        let pastMeetupInfo = pastMeetupEdge.node;
-        return (
-          <Meetup
-            key={pastMeetupInfo.slug}
-            meetupInfo={pastMeetupInfo}
-            meetupType="PAST"
-            backgroundColor={pastMeetupColors[index]}
-          />
-        )
-      })
-    }
-    <TextBlock textBlockInfo={
-      data.allContentfulTextBlock.edges
-      .filter(
-        (edge) => edge.node.type === ALL_TEXT_BLOCK_TYPES.SUBMIT_A_TALK
-      )[0].node
-    }/>
+    {data.allContentfulPastMeetup.edges.map((pastMeetupEdge, index) => {
+      let pastMeetupInfo = pastMeetupEdge.node
+      return (
+        <Meetup
+          key={pastMeetupInfo.slug}
+          meetupInfo={pastMeetupInfo}
+          meetupType="PAST"
+          backgroundColor={pastMeetupColors[index]}
+        />
+      )
+    })}
+    <TextBlock
+      textBlockInfo={
+        data.allContentfulTextBlock.edges.filter(
+          edge => edge.node.type === ALL_TEXT_BLOCK_TYPES.SUBMIT_A_TALK
+        )[0].node
+      }
+    />
     <Footer />
   </Layout>
 )
-
 
 export const query = graphql`
   query {

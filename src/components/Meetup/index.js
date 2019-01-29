@@ -1,1 +1,1 @@
-export { default } from './Meetup.component';
+export { default } from './Meetup.component'

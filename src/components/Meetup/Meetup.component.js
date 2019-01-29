@@ -3,51 +3,65 @@ import StyledMeetup from './Meetup.style'
 
 import Button from '../Button'
 
-import PropTypes from "prop-types"
+import PropTypes from 'prop-types'
 
-const Meetup = ({meetupInfo, meetupType, backgroundColor}) => (
+const Meetup = ({ meetupInfo, meetupType, backgroundColor }) => (
   <div className="meetup-container">
     <StyledMeetup backgroundColor={backgroundColor}>
       <div className="meetup-name">
-        <h2>JAMstack.paris #{meetupInfo.edition} – {meetupInfo.title}</h2>
+        <h2>
+          JAMstack.paris #{meetupInfo.edition} – {meetupInfo.title}
+        </h2>
       </div>
       <div className="meetup-informations">
         <div className="meetup-informations-basic">
           <div className="meetup-informations-basic-date">
             {/* TODO: hookup the real date with meetupInfo.date (needs parsing)*/}
             <div className="meetup-informations-basic-highlight">
-              {
-                meetupType === 'UPCOMING' ? `Mercredi 27 Février` : `Mardi 18 décembre 2018`
-              }
+              {meetupType === 'UPCOMING'
+                ? `Mercredi 27 Février`
+                : `Mardi 18 décembre 2018`}
             </div>
             <div>19h</div>
             <div>
-              {
-                meetupType === 'UPCOMING' ? `Entrée libre, sur inscription` : `47 participants`
-              }
+              {meetupType === 'UPCOMING'
+                ? `Entrée libre, sur inscription`
+                : `47 participants`}
             </div>
           </div>
           <div className="meetup-informations-basic-place">
-            <div className="meetup-informations-basic-highlight">{meetupInfo.addressCompanyName}</div>
+            <div className="meetup-informations-basic-highlight">
+              {meetupInfo.addressCompanyName}
+            </div>
             <div>{meetupInfo.addressStreetAddress}</div>
             <div>{meetupInfo.addressCity}</div>
           </div>
         </div>
         <div
           className="meetup-informations-talks"
-          dangerouslySetInnerHTML={{__html: meetupInfo.description.childContentfulRichText.html}}
+          dangerouslySetInnerHTML={{
+            __html: meetupInfo.description.childContentfulRichText.html,
+          }}
         />
       </div>
-      { meetupType === 'UPCOMING' &&
-        (<div className="meetup-subscribe">
-          <Button url={meetupInfo.meetupUrl} text="S'inscrire sur Meetup →" type="primary" />
-        </div>)
-      }
-      { meetupType === 'PAST' &&
-        (<div className="meetup-subscribe">
-          <Button url="https://www.youtube.com/channel/UC66eQOycjMnaqzpbRUhEK2w" text="Voir les vidéos →" type="neutral" />
-        </div>)
-      }
+      {meetupType === 'UPCOMING' && (
+        <div className="meetup-subscribe">
+          <Button
+            url={meetupInfo.meetupUrl}
+            text="S'inscrire sur Meetup →"
+            type="primary"
+          />
+        </div>
+      )}
+      {meetupType === 'PAST' && (
+        <div className="meetup-subscribe">
+          <Button
+            url="https://www.youtube.com/channel/UC66eQOycjMnaqzpbRUhEK2w"
+            text="Voir les vidéos →"
+            type="neutral"
+          />
+        </div>
+      )}
     </StyledMeetup>
   </div>
 )
@@ -64,7 +78,7 @@ Meetup.propTypes = {
     description: PropTypes.shape({
       childContentfulRichText: PropTypes.shape({
         html: PropTypes.string.isRequired,
-      }).isRequired
+      }).isRequired,
     }).isRequired,
   }).isRequired,
   meetupType: PropTypes.string.isRequired,

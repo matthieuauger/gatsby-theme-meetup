@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'
 import styled from 'styled-components'
 
 const StyledMeetup = styled.div`
-  ${(props) => `
+  ${props => `
     background-color: ${props.backgroundColor};
   `};
   padding-top: 15px;
@@ -19,7 +19,7 @@ const StyledMeetup = styled.div`
   .meetup-name {
     padding: 30px;
   }
-  
+
   .meetup-name h2 {
     text-align: center;
     margin: 0;
@@ -27,7 +27,7 @@ const StyledMeetup = styled.div`
 
   .meetup-informations-basic {
     width: 35%;
-    border-right: 1px solid #B3B3B3;
+    border-right: 1px solid #b3b3b3;
   }
 
   .meetup-informations-basic-highlight {
@@ -52,12 +52,12 @@ const StyledMeetup = styled.div`
 
   .meetup-informations-talks a {
     font-weight: bold;
-    box-shadow: rgb(237, 28, 64, .4) 0px -5px 0px inset;
+    box-shadow: rgb(237, 28, 64, 0.4) 0px -5px 0px inset;
     transition: box-shadow 0.3s ease-in-out 0s;
   }
 
   .meetup-informations-talks a:hover {
-    box-shadow: rgb(237, 28, 64, .4) 0px -28px 0px inset;
+    box-shadow: rgb(237, 28, 64, 0.4) 0px -28px 0px inset;
   }
 
   .meetup-subscribe {
@@ -71,7 +71,7 @@ const StyledMeetup = styled.div`
 
   @media screen and (max-width: 600px) {
     padding: 0 30px;
-    
+
     .meetup-informations {
       flex-direction: column;
     }
@@ -80,28 +80,28 @@ const StyledMeetup = styled.div`
       width: auto;
       border-right: none;
     }
-  
+
     .meetup-informations-basic-date {
       width: auto;
-      border-bottom: 1px solid #B3B3B3;
+      border-bottom: 1px solid #b3b3b3;
       padding-bottom: 20px;
     }
-  
+
     .meetup-informations-basic-place {
       width: auto;
-      border-bottom: 1px solid #B3B3B3;
+      border-bottom: 1px solid #b3b3b3;
       padding-bottom: 20px;
     }
-  
+
     .meetup-informations-talks {
       width: auto;
     }
 
     .meetup-informations-talks p {
-      border-bottom: 1px solid #B3B3B3;
+      border-bottom: 1px solid #b3b3b3;
       padding-bottom: 20px;
     }
   }
 `
 
-export default (props) => <StyledMeetup {...props} />;
+export default props => <StyledMeetup {...props} />
