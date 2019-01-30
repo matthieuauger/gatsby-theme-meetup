@@ -19,7 +19,7 @@ const Meetup = ({ meetupInfo, meetupType, backgroundColor }) => (
             {/* TODO: hookup the real date with meetupInfo.date (needs parsing)*/}
             <div className="meetup-informations-basic-highlight">
               {meetupType === 'UPCOMING'
-                ? `Mercredi 27 Février`
+                ? `Jeudi 7 Mars`
                 : `Mardi 18 décembre 2018`}
             </div>
             <div>19h</div>
