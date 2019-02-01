@@ -38,20 +38,20 @@ const StyledTextBlock = styled.div`
     max-width: none;
     padding: 30px;
     margin: 0;
-  }
 
-  .call-to-action {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-  }
+    .call-to-action {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+    }
 
-  .call-to-action a {
-    padding: 10px 35px;
-    width: 100%;
-    font-size: 1.1rem;
-    text-align: center;
-    line-height: 34px;
+    .call-to-action a {
+      padding: 10px 35px;
+      width: 100%;
+      font-size: 1.1rem;
+      text-align: center;
+      line-height: 34px;
+    }
   }
 `
 
