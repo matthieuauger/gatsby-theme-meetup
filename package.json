@@ -5,6 +5,7 @@
   "author": "Nicolas Goutay <nicolasgo@theodo.fr>",
   "dependencies": {
     "@contentful/gatsby-transformer-contentful-richtext": "^13.0.0",
+    "babel-plugin-styled-components": "^1.10.0",
     "date-fns": "^1.29.0",
     "gatsby": "^2.0.61",
     "gatsby-image": "^2.0.15",
@@ -12,6 +13,7 @@
     "gatsby-plugin-offline": "^2.0.11",
     "gatsby-plugin-react-helmet": "^3.0.0",
     "gatsby-plugin-sharp": "^2.0.12",
+    "gatsby-plugin-styled-components": "^3.0.5",
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-contentful": "^2.0.26",
     "gatsby-source-filesystem": "^2.0.4",
