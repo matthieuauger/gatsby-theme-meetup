@@ -18,15 +18,11 @@ const Meetup = ({ meetupInfo, meetupType, backgroundColor }) => (
           <div className="meetup-informations-basic-date">
             {/* TODO: hookup the real date with meetupInfo.date (needs parsing)*/}
             <div className="meetup-informations-basic-highlight">
-              {meetupType === 'UPCOMING'
-                ? `Jeudi 7 Mars`
-                : `Mardi 18 décembre 2018`}
+              {meetupInfo.dateFrenchFormat}
             </div>
             <div>19h</div>
             <div>
-              {meetupType === 'UPCOMING'
-                ? `Entrée libre, sur inscription`
-                : `47 participants`}
+              {meetupType === 'UPCOMING' ? `Entrée libre, sur inscription` : ``}
             </div>
           </div>
           <div className="meetup-informations-basic-place">
@@ -75,6 +71,7 @@ Meetup.propTypes = {
     addressCity: PropTypes.string.isRequired,
     meetupUrl: PropTypes.string.isRequired,
     date: PropTypes.string.isRequired,
+    dateFrenchFormat: PropTypes.string.isRequired,
     description: PropTypes.shape({
       childContentfulRichText: PropTypes.shape({
         html: PropTypes.string.isRequired,

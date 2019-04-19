@@ -62,6 +62,7 @@ export const query = graphql`
     contentfulUpcomingMeetup {
       title
       date
+      dateFrenchFormat
       edition
       addressCompanyName
       addressStreetAddress
@@ -94,6 +95,7 @@ export const query = graphql`
         node {
           title
           date
+          dateFrenchFormat
           edition
           addressCompanyName
           addressStreetAddress
