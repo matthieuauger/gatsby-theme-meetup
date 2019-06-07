@@ -21,12 +21,16 @@ let pastMeetupColors = ['#DDDEC4', '#E6BB91', '#EFCC74']
 const IndexPage = ({ data }) => (
   <Layout>
     <h1>Le meetup bimestriel autour de la JAMstack</h1>
-    <h2>Prochain Meetup</h2>
-    <Meetup
-      meetupInfo={data.contentfulUpcomingMeetup}
-      meetupType="UPCOMING"
-      backgroundColor={currentMeetupColor}
-    />
+    {data.contentfulUpcomingMeetup &&
+      <>
+        <h2>Prochain Meetup</h2>
+        <Meetup
+          meetupInfo={data.contentfulUpcomingMeetup}
+          meetupType="UPCOMING"
+          backgroundColor={currentMeetupColor}
+        />
+      </>
+    }
     <TextBlock
       textBlockInfo={
         data.allContentfulTextBlock.edges.filter(
@@ -57,23 +61,30 @@ const IndexPage = ({ data }) => (
   </Layout>
 )
 
+/**
+ * Because there are currently no upcoming meetup, I had to remove the following
+ * query:
+ * 
+ *  contentfulUpcomingMeetup {
+ *    title
+ *    date
+ *    dateFrenchFormat
+ *    edition
+ *    addressCompanyName
+ *    addressStreetAddress
+ *    addressCity
+ *    meetupUrl
+ *    description {
+ *      childContentfulRichText {
+ *        html
+ *      }
+ *    }  
+ *  }
+ *
+ * It must be added back for the next meetup.
+ */
 export const query = graphql`
   query {
-    contentfulUpcomingMeetup {
-      title
-      date
-      dateFrenchFormat
-      edition
-      addressCompanyName
-      addressStreetAddress
-      addressCity
-      meetupUrl
-      description {
-        childContentfulRichText {
-          html
-        }
-      }
-    }
     allContentfulTextBlock {
       edges {
         node {
@@ -90,7 +101,7 @@ export const query = graphql`
         }
       }
     }
-    allContentfulPastMeetup {
+    allContentfulPastMeetup(sort: {fields: edition, order: DESC}) {
       edges {
         node {
           title
