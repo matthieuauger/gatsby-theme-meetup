@@ -1,3 +1,3 @@
 module.exports = {
-  __experimentalThemes: ["gatsby-theme-simple"]
+  __experimentalThemes: ["gatsby-theme-jamstack-meetup"]
 };

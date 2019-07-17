@@ -1,6 +1,6 @@
 {
-  "name": "jamstack-paris",
-  "description": "JAMstack.paris",
+  "name": "gatsby-theme-jamstack-meetup",
+  "description": "JAMstack.paris Gatsby Theme",
   "version": "1.0.0",
   "author": "Nicolas Goutay <nicolasgo@theodo.fr>",
   "dependencies": {

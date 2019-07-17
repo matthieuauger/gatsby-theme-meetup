@@ -11,7 +11,7 @@
   "license": "MIT",
   "dependencies": {
     "gatsby": "^2.13.12",
-    "gatsby-theme-simple": "*",
+    "gatsby-theme-jamstack-meetup": "*",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   }
