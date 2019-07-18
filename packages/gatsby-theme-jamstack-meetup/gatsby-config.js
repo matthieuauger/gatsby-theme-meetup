@@ -26,7 +26,7 @@ module.exports = {
         background_color: '#F8F9F4',
         theme_color: '#4A4A4A',
         display: 'minimal-ui',
-        icon: 'src/images/jamstack-paris-square.png', // This path is relative to the root of the site.
+        icon: `${__dirname}/src/images/jamstack-paris-square.png`, // This path is relative to the root of the site.
         gcm_sender_id: '482941778795',
         gcm_sender_id_comment: 'Do not change the GCM Sender ID',
       },
