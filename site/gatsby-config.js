@@ -1,3 +1,10 @@
 module.exports = {
-  __experimentalThemes: ["gatsby-theme-jamstack-meetup"]
+  plugins: [
+    {
+      resolve: "gatsby-theme-jamstack-meetup",
+      options: {
+        title: "JAMstack London"
+      }
+    }
+  ]
 };
