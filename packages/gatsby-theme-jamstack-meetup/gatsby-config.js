@@ -1,4 +1,4 @@
-require("dotenv").config({
+require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
@@ -27,8 +27,8 @@ module.exports = {
         theme_color: '#4A4A4A',
         display: 'minimal-ui',
         icon: 'src/images/jamstack-paris-square.png', // This path is relative to the root of the site.
-        gcm_sender_id: "482941778795",
-        gcm_sender_id_comment: "Do not change the GCM Sender ID"
+        gcm_sender_id: '482941778795',
+        gcm_sender_id_comment: 'Do not change the GCM Sender ID',
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
@@ -46,9 +46,9 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ['IBM Plex Mono:400,700', 'IBM Plex Sans:400,700']
-        }
-      }
+          families: ['IBM Plex Mono:400,700', 'IBM Plex Sans:400,700'],
+        },
+      },
     },
     `gatsby-plugin-styled-components`,
   ],
