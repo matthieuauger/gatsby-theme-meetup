@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 import Footer from '../components/Footer'
 import Layout from '../components/Layout'
 import Meetup from '../components/Meetup'
+import DeprecatedTextBlock from '../components/DeprecatedTextBlock'
 import TextBlock from '../components/TextBlock'
 
 /**
@@ -31,13 +32,8 @@ const IndexPage = ({ data }) => (
         />
       </>
     )}
-    <TextBlock
-      textBlockInfo={
-        data.allContentfulTextBlock.edges.filter(
-          edge => edge.node.type === ALL_TEXT_BLOCK_TYPES.WHAT_IS_JAMSTACK
-        )[0].node
-      }
-    />
+    <TextBlock textBlockHTML={data.whatIsJAMstackTextBlock.html} />
+
     <h2>Meetups précédents</h2>
     {data.meetupGroup.events.map((pastMeetup, index) => {
       return (
@@ -49,7 +45,7 @@ const IndexPage = ({ data }) => (
         />
       )
     })}
-    <TextBlock
+    <DeprecatedTextBlock
       textBlockInfo={
         data.allContentfulTextBlock.edges.filter(
           edge => edge.node.type === ALL_TEXT_BLOCK_TYPES.SUBMIT_A_TALK
@@ -91,6 +87,11 @@ export const query = graphql`
         link
       }
       name
+    }
+    whatIsJAMstackTextBlock: markdownRemark(
+      frontmatter: { type: { eq: "what-is-jamstack" } }
+    ) {
+      html
     }
   }
 `

@@ -19,6 +19,7 @@
     "gatsby-source-contentful": "^2.0.26",
     "gatsby-source-filesystem": "^2.0.4",
     "gatsby-source-meetup": "^1.0.0",
+    "gatsby-transformer-remark": "^2.6.9",
     "gatsby-transformer-sharp": "^2.1.4",
     "netlify-lambda": "^1.1.0",
     "react": "^16.5.1",
