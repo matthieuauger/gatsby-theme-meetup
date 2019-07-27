@@ -4,7 +4,8 @@ module.exports = {
       resolve: "gatsby-theme-jamstack-meetup",
       options: {
         title: "JAMstack London",
-        meetupCity: "London"
+        meetupCity: "London",
+        meetupDotComGroupUrlName: "JAMstack-London"
       }
     }
   ]
