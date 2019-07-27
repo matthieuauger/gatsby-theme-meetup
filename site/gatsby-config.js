@@ -5,7 +5,8 @@ module.exports = {
       options: {
         title: "JAMstack London",
         meetupCity: "London",
-        meetupDotComGroupUrlName: "JAMstack-London"
+        meetupDotComGroupUrlName: "JAMstack-London",
+        textBlockPath: `${__dirname}/src/text-blocks`
       }
     }
   ]
