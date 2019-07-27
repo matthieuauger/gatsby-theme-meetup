@@ -2,10 +2,15 @@ require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
-module.exports = ({ title = 'JAMstack.paris', meetupCity = 'Paris' }) => ({
+module.exports = ({
+  title = 'JAMstack.paris',
+  meetupCity = 'Paris',
+  meetupDotComGroupUrlName = 'jamstack-paris',
+}) => ({
   siteMetadata: {
     title: title,
     meetupCity: meetupCity,
+    meetupDotComGroupUrlName: meetupDotComGroupUrlName,
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -59,7 +64,7 @@ module.exports = ({ title = 'JAMstack.paris', meetupCity = 'Paris' }) => ({
         key: process.env.MEETUP_API_KEY,
         // Mandatory: the URL name of a Meetup Group.
         // See the URL of the group page, e.g. https://www.meetup.com/fr-FR/jamstack-paris
-        groupUrlName: 'jamstack-paris',
+        groupUrlName: meetupDotComGroupUrlName,
         // Optional parameters for retrieving Events, see full documentation at
         // https://www.meetup.com/meetup_api/docs/:urlname/events/?uri=%2Fmeetup_api%2Fdocs%2F%3Aurlname%2Fevents%2F#list
         status: 'upcoming,past',
