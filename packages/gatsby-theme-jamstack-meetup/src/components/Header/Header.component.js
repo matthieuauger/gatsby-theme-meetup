@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import logo from '../../images/jamstack-paris-community.svg'
+import MeetupLogo from './MeetupLogo.component'
 import StyledHeader from './Header.style'
 import Button from '../Button'
 
@@ -9,7 +9,7 @@ const Header = ({ siteTitle, siteMeetupCity }) => (
     <StyledHeader>
       <div className="logo">
         <Link to="/">
-          <img src={logo} alt="JAMstack.paris logo" />
+          <MeetupLogo />
         </Link>
         <div className="app-name">
           <div className="app-name-classic">JAMstack</div>
