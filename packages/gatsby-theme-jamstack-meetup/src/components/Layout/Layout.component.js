@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
-import favicon from '../../images/favicon-16x16.png';
+import favicon from '../../images/favicon-16x16.png'
 
 import Header from '../Header'
 import './layout.css'
@@ -27,7 +27,7 @@ const Layout = ({ children }) => (
             { name: 'keywords', content: 'JAMstack, paris' },
           ]}
           link={[
-            { rel: 'shortcut icon', type: 'image/png', href: `${favicon}` }
+            { rel: 'shortcut icon', type: 'image/png', href: `${favicon}` },
           ]}
         >
           <html lang="en" />
