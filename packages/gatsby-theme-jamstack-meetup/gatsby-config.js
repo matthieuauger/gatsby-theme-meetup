@@ -6,6 +6,7 @@ module.exports = ({
   title = 'JAMstack.paris',
   meetupCity = 'Paris',
   meetupDotComGroupUrlName = 'jamstack-paris',
+  textBlockPath = `${__dirname}/src/text-blocks`,
 }) => ({
   siteMetadata: {
     title: title,
@@ -25,7 +26,7 @@ module.exports = ({
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `text-blocks`,
-        path: `${__dirname}/src/text-blocks`,
+        path: textBlockPath,
       },
     },
     `gatsby-transformer-remark`,
