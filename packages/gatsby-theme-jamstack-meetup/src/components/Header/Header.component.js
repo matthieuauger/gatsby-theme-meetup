@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import MeetupLogo from './MeetupLogo.component'
+import MeetupLogo from './MeetupLogo.component.js'
 import StyledHeader from './Header.style'
 import Button from '../Button'
 
