@@ -14,6 +14,7 @@ const Layout = ({ children }) => (
         site {
           siteMetadata {
             title
+            meetupCity
           }
         }
       }
@@ -32,7 +33,10 @@ const Layout = ({ children }) => (
         >
           <html lang="en" />
         </Helmet>
-        <Header siteTitle={data.site.siteMetadata.title} />
+        <Header
+          siteTitle={data.site.siteMetadata.title}
+          siteMeetupCity={data.site.siteMetadata.meetupCity}
+        />
         <div>{children}</div>
       </>
     )}

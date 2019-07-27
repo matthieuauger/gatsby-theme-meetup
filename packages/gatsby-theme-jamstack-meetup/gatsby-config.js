@@ -2,9 +2,10 @@ require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
-module.exports = ({ title = 'JAMstack.paris' }) => ({
+module.exports = ({ title = 'JAMstack.paris', meetupCity = 'Paris' }) => ({
   siteMetadata: {
     title: title,
+    meetupCity: meetupCity,
   },
   plugins: [
     'gatsby-plugin-react-helmet',

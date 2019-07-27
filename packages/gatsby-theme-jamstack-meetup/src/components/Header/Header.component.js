@@ -4,7 +4,7 @@ import logo from '../../images/jamstack-paris-community.svg'
 import StyledHeader from './Header.style'
 import Button from '../Button'
 
-const Header = ({ siteTitle }) => (
+const Header = ({ siteTitle, siteMeetupCity }) => (
   <div className="header-container">
     <StyledHeader>
       <div className="logo">
@@ -13,7 +13,7 @@ const Header = ({ siteTitle }) => (
         </Link>
         <div className="app-name">
           <div className="app-name-classic">JAMstack</div>
-          <div className="app-name-classic">Paris</div>
+          <div className="app-name-classic">{siteMeetupCity}</div>
           <div className="app-name-highlight">Meetup</div>
         </div>
       </div>
