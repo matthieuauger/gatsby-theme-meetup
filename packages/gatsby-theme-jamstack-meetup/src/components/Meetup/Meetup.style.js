@@ -7,7 +7,6 @@ const StyledMeetup = styled.div`
   `};
   padding-top: 15px;
   padding-bottom: 30px;
-  margin-bottom: 30px;
 
   .meetup-informations {
     display: flex;

@@ -9,7 +9,7 @@
   "author": "",
   "license": "MIT",
   "private": true,
-   "workspaces": [
+  "workspaces": [
     "site",
     "packages/*"
   ]

@@ -21,12 +21,16 @@ let pastMeetupColors = ['#DDDEC4', '#E6BB91', '#EFCC74']
 const IndexPage = ({ data }) => (
   <Layout>
     <h1>Le meetup bimestriel autour de la JAMstack</h1>
-    <h2>Prochain Meetup</h2>
-    <Meetup
-      meetupInfo={data.contentfulUpcomingMeetup}
-      meetupType="UPCOMING"
-      backgroundColor={currentMeetupColor}
-    />
+    {data.contentfulUpcomingMeetup && (
+      <>
+        <h2>Prochain Meetup</h2>
+        <Meetup
+          meetupInfo={data.contentfulUpcomingMeetup}
+          meetupType="UPCOMING"
+          backgroundColor={currentMeetupColor}
+        />
+      </>
+    )}
     <TextBlock
       textBlockInfo={
         data.allContentfulTextBlock.edges.filter(
@@ -35,12 +39,11 @@ const IndexPage = ({ data }) => (
       }
     />
     <h2>Meetups précédents</h2>
-    {data.allContentfulPastMeetup.edges.map((pastMeetupEdge, index) => {
-      let pastMeetupInfo = pastMeetupEdge.node
+    {data.meetupGroup.events.map((pastMeetup, index) => {
       return (
         <Meetup
-          key={pastMeetupInfo.slug}
-          meetupInfo={pastMeetupInfo}
+          key={pastMeetup.name}
+          meetupInfo={pastMeetup}
           meetupType="PAST"
           backgroundColor={pastMeetupColors[index]}
         />
@@ -59,21 +62,6 @@ const IndexPage = ({ data }) => (
 
 export const query = graphql`
   query {
-    contentfulUpcomingMeetup {
-      title
-      date
-      dateFrenchFormat
-      edition
-      addressCompanyName
-      addressStreetAddress
-      addressCity
-      meetupUrl
-      description {
-        childContentfulRichText {
-          html
-        }
-      }
-    }
     allContentfulTextBlock {
       edges {
         node {
@@ -90,25 +78,19 @@ export const query = graphql`
         }
       }
     }
-    allContentfulPastMeetup {
-      edges {
-        node {
-          title
-          date
-          dateFrenchFormat
-          edition
-          addressCompanyName
-          addressStreetAddress
-          addressCity
-          meetupUrl
-          description {
-            childContentfulRichText {
-              html
-            }
-          }
-          slug
+    meetupGroup {
+      events {
+        name
+        description
+        local_date
+        venue {
+          name
+          address_1
+          city
         }
+        link
       }
+      name
     }
   }
 `

@@ -1,4 +1,6 @@
 import React from 'react'
+import dayjs from 'dayjs'
+import 'dayjs/locale/fr'
 import StyledMeetup from './Meetup.style'
 
 import Button from '../Button'
@@ -10,7 +12,7 @@ const Meetup = ({ meetupInfo, meetupType, backgroundColor }) => (
     <StyledMeetup backgroundColor={backgroundColor}>
       <div className="meetup-name">
         <h2>
-          JAMstack.paris #{meetupInfo.edition} – {meetupInfo.title}
+          {meetupInfo.name}
         </h2>
       </div>
       <div className="meetup-informations">
@@ -18,7 +20,7 @@ const Meetup = ({ meetupInfo, meetupType, backgroundColor }) => (
           <div className="meetup-informations-basic-date">
             {/* TODO: hookup the real date with meetupInfo.date (needs parsing)*/}
             <div className="meetup-informations-basic-highlight">
-              {meetupInfo.dateFrenchFormat}
+              {dayjs(meetupInfo.local_date).locale('fr').format('dddd DD MMMM YYYY')}
             </div>
             <div>19h</div>
             <div>
@@ -27,23 +29,23 @@ const Meetup = ({ meetupInfo, meetupType, backgroundColor }) => (
           </div>
           <div className="meetup-informations-basic-place">
             <div className="meetup-informations-basic-highlight">
-              {meetupInfo.addressCompanyName}
+              {meetupInfo.venue.name}
             </div>
-            <div>{meetupInfo.addressStreetAddress}</div>
-            <div>{meetupInfo.addressCity}</div>
+            <div>{meetupInfo.venue.address_1}</div>
+            <div>{meetupInfo.venue.city}</div>
           </div>
         </div>
         <div
           className="meetup-informations-talks"
           dangerouslySetInnerHTML={{
-            __html: meetupInfo.description.childContentfulRichText.html,
+            __html: meetupInfo.description,
           }}
         />
       </div>
       {meetupType === 'UPCOMING' && (
         <div className="meetup-subscribe">
           <Button
-            url={meetupInfo.meetupUrl}
+            url={meetupInfo.link}
             text="S'inscrire sur Meetup →"
             type="primary"
           />
@@ -64,22 +66,16 @@ const Meetup = ({ meetupInfo, meetupType, backgroundColor }) => (
 
 Meetup.propTypes = {
   meetupInfo: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    edition: PropTypes.number.isRequired,
-    addressCompanyName: PropTypes.string.isRequired,
-    addressStreetAddress: PropTypes.string.isRequired,
-    addressCity: PropTypes.string.isRequired,
-    meetupUrl: PropTypes.string.isRequired,
-    date: PropTypes.string.isRequired,
-    dateFrenchFormat: PropTypes.string.isRequired,
-    description: PropTypes.shape({
-      childContentfulRichText: PropTypes.shape({
-        html: PropTypes.string.isRequired,
-      }).isRequired,
+    name: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    link: PropTypes.string.isRequired,
+    local_date: PropTypes.string.isRequired,
+    venue: PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      address_1: PropTypes.string.isRequired,
+      city: PropTypes.string.isRequired,
     }).isRequired,
   }).isRequired,
-  meetupType: PropTypes.string.isRequired,
-  backgroundColor: PropTypes.string.isRequired,
 }
 
 export default Meetup
