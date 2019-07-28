@@ -4,16 +4,7 @@ import { graphql } from 'gatsby'
 import Footer from '../components/Footer'
 import Layout from '../components/Layout'
 import Meetup from '../components/Meetup'
-import DeprecatedTextBlock from '../components/DeprecatedTextBlock'
 import TextBlock from '../components/TextBlock'
-
-/**
- * TextBlock types come from Contentful
- */
-const ALL_TEXT_BLOCK_TYPES = {
-  WHAT_IS_JAMSTACK: 'what-is-jamstack',
-  SUBMIT_A_TALK: 'submit-a-talk',
-}
 
 let currentMeetupColor = '#F3DBD1'
 
@@ -45,13 +36,7 @@ const IndexPage = ({ data }) => (
         />
       )
     })}
-    <DeprecatedTextBlock
-      textBlockInfo={
-        data.allContentfulTextBlock.edges.filter(
-          edge => edge.node.type === ALL_TEXT_BLOCK_TYPES.SUBMIT_A_TALK
-        )[0].node
-      }
-    />
+    <TextBlock textBlockHTML={data.submitATalk.html} />
     <Footer />
   </Layout>
 )
@@ -90,6 +75,11 @@ export const query = graphql`
     }
     whatIsJAMstackTextBlock: markdownRemark(
       frontmatter: { type: { eq: "what-is-jamstack" } }
+    ) {
+      html
+    }
+    submitATalk: markdownRemark(
+      frontmatter: { type: { eq: "submit-a-talk" } }
     ) {
       html
     }
