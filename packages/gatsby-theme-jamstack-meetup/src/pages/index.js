@@ -19,7 +19,7 @@ const IndexPage = ({ data }) => (
     {data.meetupGroup.events.map((pastMeetup, index) => {
       return (
         <Meetup
-          key={pastMeetup.name}
+          key={pastMeetup.id}
           meetupInfo={pastMeetup}
           meetupType="PAST"
           backgroundColor={pastMeetupColors[index]}
@@ -35,6 +35,7 @@ export const query = graphql`
   query {
     meetupGroup {
       events {
+        id
         name
         description
         local_date
