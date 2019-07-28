@@ -1,35 +1,63 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import dayjs from 'dayjs'
 
 import Footer from '../components/Footer'
 import Layout from '../components/Layout'
 import Meetup from '../components/Meetup'
 import TextBlock from '../components/TextBlock'
 
-// let currentMeetupColor = '#F3DBD1'
-
+let currentMeetupColor = '#F3DBD1'
 let pastMeetupColors = ['#DDDEC4', '#E6BB91', '#EFCC74']
 
-const IndexPage = ({ data }) => (
-  <Layout>
-    <h1>Le meetup bimestriel autour de la JAMstack</h1>
-    <TextBlock textBlockHTML={data.whatIsJAMstackTextBlock.html} />
+/**
+ * If there is no upcoming meetup, return `null`
+ * Else, return the meetup in the future closest to today by sorting
+ * by ascending date and returning the first element
+ */
+const getNextMeetup = meetups =>
+  meetups.length === 0
+    ? null
+    : meetups.sort((a, b) =>
+        dayjs(a.local_date).isBefore(dayjs(b.local_date)) ? -1 : 1
+      )[0]
 
-    <h2>Meetups précédents</h2>
-    {data.meetupGroup.events.map((pastMeetup, index) => {
-      return (
+const IndexPage = ({ data }) => {
+  const upcomingMeetups = data.meetupGroup.events.filter(
+    event => event.status === 'upcoming' || event.status === 'draft'
+  )
+  const nextMeetup = getNextMeetup(upcomingMeetups)
+  const pastMeetups = data.meetupGroup.events.filter(
+    event => event.status === 'past'
+  )
+  return (
+    <Layout>
+      <h1>Le meetup bimestriel autour de la JAMstack</h1>
+      {nextMeetup && (
         <Meetup
-          key={pastMeetup.id}
-          meetupInfo={pastMeetup}
-          meetupType="PAST"
-          backgroundColor={pastMeetupColors[index]}
+          meetupInfo={nextMeetup}
+          meetupType="UPCOMING"
+          backgroundColor={currentMeetupColor}
         />
-      )
-    })}
-    <TextBlock textBlockHTML={data.submitATalk.html} />
-    <Footer />
-  </Layout>
-)
+      )}
+      <TextBlock textBlockHTML={data.whatIsJAMstackTextBlock.html} />
+
+      <h2>Meetups précédents</h2>
+      {pastMeetups.map((pastMeetup, index) => {
+        return (
+          <Meetup
+            key={pastMeetup.id}
+            meetupInfo={pastMeetup}
+            meetupType="PAST"
+            backgroundColor={pastMeetupColors[index]}
+          />
+        )
+      })}
+      <TextBlock textBlockHTML={data.submitATalk.html} />
+      <Footer />
+    </Layout>
+  )
+}
 
 export const query = graphql`
   query {
@@ -45,6 +73,7 @@ export const query = graphql`
           city
         }
         link
+        status
       }
       name
     }
