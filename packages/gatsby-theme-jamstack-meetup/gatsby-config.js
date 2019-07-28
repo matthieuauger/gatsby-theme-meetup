@@ -50,14 +50,6 @@ module.exports = ({
     // To learn more, visit: https://gatsby.app/offline
     'gatsby-plugin-offline',
     {
-      resolve: `gatsby-source-contentful`,
-      options: {
-        spaceId: process.env.CONTENTFUL_SPACE_ID,
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-      },
-    },
-    `@contentful/gatsby-transformer-contentful-richtext`,
-    {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
