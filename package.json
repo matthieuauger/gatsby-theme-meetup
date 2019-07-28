@@ -11,6 +11,6 @@
   "private": true,
   "workspaces": [
     "site",
-    "packages/*"
+    "packages/@matthieuauger/gatsby-theme-meetup"
   ]
 }

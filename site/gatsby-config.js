@@ -1,7 +1,7 @@
 module.exports = {
   plugins: [
     {
-      resolve: "gatsby-theme-jamstack-meetup",
+      resolve: "@matthieuauger/gatsby-theme-meetup",
       options: {
         title: "JAMstack London",
         meetupCity: "London",

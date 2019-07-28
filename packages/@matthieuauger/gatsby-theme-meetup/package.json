@@ -1,8 +1,11 @@
 {
-  "name": "gatsby-theme-jamstack-meetup",
-  "description": "JAMstack.paris Gatsby Theme",
-  "version": "1.0.0",
-  "author": "Nicolas Goutay <nicolasgo@theodo.fr>",
+  "name": "@matthieuauger/gatsby-theme-meetup",
+  "description": " Gatsby Meetup Theme",
+  "version": "1.0.1",
+  "author": "Matthieu Auger <matthieua@theodo.fr>",
+  "contributors": [
+    "Nicolas Goutay <nicolasgo@theodo.fr>"
+  ],
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.0",
     "date-fns": "^1.29.0",
@@ -27,9 +30,9 @@
     "styled-components": "^4.0.3"
   },
   "keywords": [
-    "JAMstack",
-    "meetup",
-    "paris"
+    "gatsby",
+    "theme",
+    "meetup"
   ],
   "license": "MIT",
   "scripts": {
@@ -45,6 +48,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/JAMstack-paris/jamstack.paris"
+    "url": "https://github.com/matthieuauger/gatsby-theme-meetup"
   }
 }
