@@ -2,10 +2,10 @@
 type: 'footer'
 ---
 
-Meetup organized with ️️❤️ by [Phil Hawksworth](https://twitter.com/philhawksworth).
+Meetup organisé avec ️️❤️ par [Matthieu Auger](https://twitter.com/matthieuauger) et [Nicolas Goutay](https://twitter.com/phacks).
 
 <br />
 
-This site is buit with [GatsbyJS](https://gatsbyjs.org), [Gatsby Theme Meetup](https://github.com/matthieuauger/gatsby-theme-meetup) and [Netlify](https://netlify.com).
+Site construit avec [GatsbyJS](https://gatsbyjs.org), [Gatsby Theme Meetup](https://github.com/matthieuauger/gatsby-theme-meetup) et [Netlify](https://netlify.com).
 
-See the source code on [GitHub](https://github.com/jamstack-paris/jamstack.paris).
+Voir le code source sur [GitHub](https://github.com/jamstack-paris/jamstack.paris).
