@@ -3,14 +3,13 @@ require('dotenv').config({
 })
 
 module.exports = ({
-  title = 'JAMstack.paris',
-  meetupCity = 'Paris',
+  meetupName = 'JAMstack Paris',
   meetupDotComGroupUrlName = 'jamstack-paris',
   textBlockPath = `${__dirname}/src/text-blocks`,
 }) => ({
   siteMetadata: {
-    title: title,
-    meetupCity: meetupCity,
+    /* custom metadata to be injected into pages */
+    meetupName: meetupName,
     meetupDotComGroupUrlName: meetupDotComGroupUrlName,
   },
   plugins: [

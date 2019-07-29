@@ -4,7 +4,7 @@ import MeetupLogo from './MeetupLogo.component.js'
 import StyledHeader from './Header.style'
 import Button from '../Button'
 
-const Header = ({ siteTitle, siteMeetupCity }) => (
+const Header = ({ meetupName }) => (
   <div className="header-container">
     <StyledHeader>
       <div className="logo">
@@ -12,8 +12,7 @@ const Header = ({ siteTitle, siteMeetupCity }) => (
           <MeetupLogo />
         </Link>
         <div className="app-name">
-          <div className="app-name-classic">JAMstack</div>
-          <div className="app-name-classic">{siteMeetupCity}</div>
+          <div className="app-name-classic">{meetupName}</div>
           <div className="app-name-highlight">Meetup</div>
         </div>
       </div>

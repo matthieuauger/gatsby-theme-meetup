@@ -13,8 +13,7 @@ const Layout = ({ children }) => (
       query SiteTitleQuery {
         site {
           siteMetadata {
-            title
-            meetupCity
+            meetupName
           }
         }
       }
@@ -22,7 +21,7 @@ const Layout = ({ children }) => (
     render={data => (
       <>
         <Helmet
-          title={data.site.siteMetadata.title}
+          title={data.site.siteMetadata.meetupName}
           meta={[
             { name: 'description', content: 'JAMstack.paris' },
             { name: 'keywords', content: 'JAMstack, paris' },
@@ -33,10 +32,7 @@ const Layout = ({ children }) => (
         >
           <html lang="en" />
         </Helmet>
-        <Header
-          siteTitle={data.site.siteMetadata.title}
-          siteMeetupCity={data.site.siteMetadata.meetupCity}
-        />
+        <Header meetupName={data.site.siteMetadata.meetupName} />
         <div>{children}</div>
       </>
     )}
