@@ -32,7 +32,7 @@ const IndexPage = ({ data }) => {
   )
   return (
     <Layout>
-      <h1>Le meetup bimestriel autour de la JAMstack</h1>
+      <h1>{data.site.siteMetadata.meetupHomepageHeadline}</h1>
       {nextMeetup && (
         <Meetup
           meetupInfo={nextMeetup}
@@ -61,6 +61,11 @@ const IndexPage = ({ data }) => {
 
 export const query = graphql`
   query {
+    site {
+      siteMetadata {
+        meetupHomepageHeadline
+      }
+    }
     meetupGroup {
       events {
         id
