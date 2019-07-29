@@ -10,7 +10,7 @@ module.exports = ({
   meetupVideosUrl = 'https://www.youtube.com/channel/UC66eQOycjMnaqzpbRUhEK2w',
   displayTalkProposalLink = true,
   talkProposalUrl = 'https://docs.google.com/forms/d/e/1FAIpQLScYo0W4QAkRHLj0fS_TXZXFuSUJ_cRlmyJCeRTPDQVt9RBNog/viewform',
-  textBlockPath = `${__dirname}/src/text-blocks`,
+  textBlocksPath = `${__dirname}/src/text-blocks`,
 }) => ({
   siteMetadata: {
     /* custom metadata to be injected into pages */
@@ -35,7 +35,7 @@ module.exports = ({
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `text-blocks`,
-        path: textBlockPath,
+        path: textBlocksPath,
       },
     },
     `gatsby-transformer-remark`,
