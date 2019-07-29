@@ -8,6 +8,8 @@ module.exports = ({
   meetupDotComGroupUrlName = 'jamstack-paris',
   displayVideosLink = true,
   meetupVideosUrl = 'https://www.youtube.com/channel/UC66eQOycjMnaqzpbRUhEK2w',
+  displayTalkProposalLink = true,
+  talkProposalUrl = 'https://docs.google.com/forms/d/e/1FAIpQLScYo0W4QAkRHLj0fS_TXZXFuSUJ_cRlmyJCeRTPDQVt9RBNog/viewform',
   textBlockPath = `${__dirname}/src/text-blocks`,
 }) => ({
   siteMetadata: {
@@ -17,6 +19,8 @@ module.exports = ({
     meetupDotComGroupUrlName: meetupDotComGroupUrlName,
     displayVideosLink: displayVideosLink,
     meetupVideosUrl: meetupVideosUrl,
+    displayTalkProposalLink: displayTalkProposalLink,
+    talkProposalUrl: talkProposalUrl,
   },
   plugins: [
     'gatsby-plugin-react-helmet',
