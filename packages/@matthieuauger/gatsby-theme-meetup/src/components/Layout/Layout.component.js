@@ -10,12 +10,10 @@ import './layout.css'
 const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
-      query SiteTitleQuery {
+      query MeetupNameQuery {
         site {
           siteMetadata {
             meetupName
-            displayVideosLink
-            meetupVideosUrl
           }
         }
       }
@@ -34,11 +32,7 @@ const Layout = ({ children }) => (
         >
           <html lang="en" />
         </Helmet>
-        <Header
-          meetupName={data.site.siteMetadata.meetupName}
-          displayVideosLink={data.site.siteMetadata.displayVideosLink}
-          meetupVideosUrl={data.site.siteMetadata.meetupVideosUrl}
-        />
+        <Header />
         <div>{children}</div>
       </>
     )}
