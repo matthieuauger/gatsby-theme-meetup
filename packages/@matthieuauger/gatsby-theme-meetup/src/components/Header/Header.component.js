@@ -4,7 +4,7 @@ import MeetupLogo from './MeetupLogo.component.js'
 import StyledHeader from './Header.style'
 import Button from '../Button'
 
-const Header = ({ meetupName }) => (
+const Header = ({ meetupName, displayVideosLink, meetupVideosUrl }) => (
   <div className="header-container">
     <StyledHeader>
       <div className="logo">
@@ -17,13 +17,15 @@ const Header = ({ meetupName }) => (
         </div>
       </div>
       <ul>
-        <li>
-          <Button
-            url="https://www.youtube.com/channel/UC66eQOycjMnaqzpbRUhEK2w"
-            text="Parcourir les vidéos →"
-            type="neutral"
-          />
-        </li>
+        {displayVideosLink && (
+          <li>
+            <Button
+              url={meetupVideosUrl}
+              text="Parcourir les vidéos →"
+              type="neutral"
+            />
+          </li>
+        )}
         <li>
           <Button
             url="https://docs.google.com/forms/d/e/1FAIpQLScYo0W4QAkRHLj0fS_TXZXFuSUJ_cRlmyJCeRTPDQVt9RBNog/viewform"

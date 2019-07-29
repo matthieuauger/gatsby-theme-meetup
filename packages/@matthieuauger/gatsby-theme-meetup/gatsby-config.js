@@ -6,6 +6,8 @@ module.exports = ({
   meetupName = 'JAMstack Paris',
   meetupHomepageHeadline = 'Le meetup bimestriel autour de la JAMstack',
   meetupDotComGroupUrlName = 'jamstack-paris',
+  displayVideosLink = true,
+  meetupVideosUrl = 'https://www.youtube.com/channel/UC66eQOycjMnaqzpbRUhEK2w',
   textBlockPath = `${__dirname}/src/text-blocks`,
 }) => ({
   siteMetadata: {
@@ -13,6 +15,8 @@ module.exports = ({
     meetupName: meetupName,
     meetupHomepageHeadline: meetupHomepageHeadline,
     meetupDotComGroupUrlName: meetupDotComGroupUrlName,
+    displayVideosLink: displayVideosLink,
+    meetupVideosUrl: meetupVideosUrl,
   },
   plugins: [
     'gatsby-plugin-react-helmet',

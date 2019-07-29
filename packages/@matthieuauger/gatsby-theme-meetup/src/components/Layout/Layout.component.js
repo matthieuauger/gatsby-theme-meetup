@@ -14,6 +14,8 @@ const Layout = ({ children }) => (
         site {
           siteMetadata {
             meetupName
+            displayVideosLink
+            meetupVideosUrl
           }
         }
       }
@@ -32,7 +34,11 @@ const Layout = ({ children }) => (
         >
           <html lang="en" />
         </Helmet>
-        <Header meetupName={data.site.siteMetadata.meetupName} />
+        <Header
+          meetupName={data.site.siteMetadata.meetupName}
+          displayVideosLink={data.site.siteMetadata.displayVideosLink}
+          meetupVideosUrl={data.site.siteMetadata.meetupVideosUrl}
+        />
         <div>{children}</div>
       </>
     )}

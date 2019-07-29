@@ -7,20 +7,25 @@ import Button from '../Button'
 
 import PropTypes from 'prop-types'
 
-const Meetup = ({ meetupInfo, meetupType, backgroundColor }) => (
+const Meetup = ({
+  meetupInfo,
+  meetupType,
+  displayVideosLink,
+  backgroundColor,
+}) => (
   <div className="meetup-container">
     <StyledMeetup backgroundColor={backgroundColor}>
       <div className="meetup-name">
-        <h2>
-          {meetupInfo.name}
-        </h2>
+        <h2>{meetupInfo.name}</h2>
       </div>
       <div className="meetup-informations">
         <div className="meetup-informations-basic">
           <div className="meetup-informations-basic-date">
             {/* TODO: hookup the real date with meetupInfo.date (needs parsing)*/}
             <div className="meetup-informations-basic-highlight">
-              {dayjs(meetupInfo.local_date).locale('fr').format('dddd DD MMMM YYYY')}
+              {dayjs(meetupInfo.local_date)
+                .locale('fr')
+                .format('dddd DD MMMM YYYY')}
             </div>
             <div>19h</div>
             <div>
@@ -51,7 +56,7 @@ const Meetup = ({ meetupInfo, meetupType, backgroundColor }) => (
           />
         </div>
       )}
-      {meetupType === 'PAST' && (
+      {displayVideosLink && meetupType === 'PAST' && (
         <div className="meetup-subscribe">
           <Button
             url="https://www.youtube.com/channel/UC66eQOycjMnaqzpbRUhEK2w"

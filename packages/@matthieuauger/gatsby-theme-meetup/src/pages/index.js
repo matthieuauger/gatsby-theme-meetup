@@ -38,6 +38,7 @@ const IndexPage = ({ data }) => {
           meetupInfo={nextMeetup}
           meetupType="UPCOMING"
           backgroundColor={currentMeetupColor}
+          displayVideosLink={data.site.siteMetadata.displayVideosLink}
         />
       )}
       <TextBlock textBlockHTML={data.whatIsJAMstackTextBlock.html} />
@@ -50,6 +51,7 @@ const IndexPage = ({ data }) => {
             meetupInfo={pastMeetup}
             meetupType="PAST"
             backgroundColor={pastMeetupColors[index]}
+            displayVideosLink={data.site.siteMetadata.displayVideosLink}
           />
         )
       })}
@@ -63,6 +65,7 @@ export const query = graphql`
   query {
     site {
       siteMetadata {
+        displayVideosLink
         meetupHomepageHeadline
       }
     }
