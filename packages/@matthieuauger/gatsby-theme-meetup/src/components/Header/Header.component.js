@@ -13,6 +13,10 @@ const Header = ({ meetupName, displayVideosLink, meetupVideosUrl }) => (
             meetupName
             displayVideosLink
             meetupVideosUrl
+            translations {
+              FETCH_VIDEOS
+              PROPOSE_A_TALK
+            }
           }
         }
       }
@@ -36,7 +40,7 @@ const Header = ({ meetupName, displayVideosLink, meetupVideosUrl }) => (
               <li>
                 <Button
                   url={data.site.siteMetadata.meetupVideosUrl}
-                  text="Parcourir les vidéos →"
+                  text={data.site.siteMetadata.translations.FETCH_VIDEOS}
                   type="neutral"
                 />
               </li>
@@ -44,7 +48,7 @@ const Header = ({ meetupName, displayVideosLink, meetupVideosUrl }) => (
             <li>
               <Button
                 url="https://docs.google.com/forms/d/e/1FAIpQLScYo0W4QAkRHLj0fS_TXZXFuSUJ_cRlmyJCeRTPDQVt9RBNog/viewform"
-                text="Proposer un talk →"
+                text={data.site.siteMetadata.translations.PROPOSE_A_TALK}
                 type="primary"
               />
             </li>

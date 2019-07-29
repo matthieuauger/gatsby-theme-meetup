@@ -11,6 +11,11 @@ module.exports = ({
   displayTalkProposalLink = true,
   talkProposalUrl = 'https://docs.google.com/forms/d/e/1FAIpQLScYo0W4QAkRHLj0fS_TXZXFuSUJ_cRlmyJCeRTPDQVt9RBNog/viewform',
   textBlocksPath = `${__dirname}/src/text-blocks`,
+  translations = {
+    PROPOSE_A_TALK: 'Proposer un talk  →',
+    FETCH_VIDEOS: 'Parcourir les vidéos →',
+    LAST_MEETUPS: 'Meetup précédents',
+  },
 }) => ({
   siteMetadata: {
     /* custom metadata to be injected into pages */
@@ -21,6 +26,7 @@ module.exports = ({
     meetupVideosUrl: meetupVideosUrl,
     displayTalkProposalLink: displayTalkProposalLink,
     talkProposalUrl: talkProposalUrl,
+    translations: translations,
   },
   plugins: [
     'gatsby-plugin-react-helmet',

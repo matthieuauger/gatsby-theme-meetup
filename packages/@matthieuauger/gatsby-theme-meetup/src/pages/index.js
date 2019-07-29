@@ -39,11 +39,15 @@ const IndexPage = ({ data }) => {
           meetupType="UPCOMING"
           backgroundColor={currentMeetupColor}
           displayVideosLink={data.site.siteMetadata.displayVideosLink}
+          displayVideosTranslation={
+            data.site.siteMetadata.translations.FETCH_VIDEOS
+          }
+          meetupVideosUrl={data.site.siteMetadata.meetupVideosUrl}
         />
       )}
       <TextBlock textBlockHTML={data.whatIsJAMstackTextBlock.html} />
 
-      <h2>Meetups précédents</h2>
+      <h2>{data.site.siteMetadata.translations.LAST_MEETUPS}</h2>
       {pastMeetups.map((pastMeetup, index) => {
         return (
           <Meetup
@@ -52,6 +56,10 @@ const IndexPage = ({ data }) => {
             meetupType="PAST"
             backgroundColor={pastMeetupColors[index]}
             displayVideosLink={data.site.siteMetadata.displayVideosLink}
+            displayVideosTranslation={
+              data.site.siteMetadata.translations.FETCH_VIDEOS
+            }
+            meetupVideosUrl={data.site.siteMetadata.meetupVideosUrl}
           />
         )
       })}
@@ -67,6 +75,11 @@ export const query = graphql`
       siteMetadata {
         displayVideosLink
         meetupHomepageHeadline
+        meetupVideosUrl
+        translations {
+          LAST_MEETUPS
+          FETCH_VIDEOS
+        }
       }
     }
     meetupGroup {

@@ -11,6 +11,8 @@ const Meetup = ({
   meetupInfo,
   meetupType,
   displayVideosLink,
+  displayVideosTranslation,
+  meetupVideosUrl,
   backgroundColor,
 }) => (
   <div className="meetup-container">
@@ -59,8 +61,8 @@ const Meetup = ({
       {displayVideosLink && meetupType === 'PAST' && (
         <div className="meetup-subscribe">
           <Button
-            url="https://www.youtube.com/channel/UC66eQOycjMnaqzpbRUhEK2w"
-            text="Voir les vidéos →"
+            url={meetupVideosUrl}
+            text={displayVideosTranslation}
             type="neutral"
           />
         </div>
