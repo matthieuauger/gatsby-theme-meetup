@@ -2,7 +2,7 @@ import React from 'react'
 import { Link, StaticQuery, graphql } from 'gatsby'
 import MeetupLogo from './MeetupLogo.component.js'
 import StyledHeader from './Header.style'
-import Menu from './Menu.component'
+import Menu from './Menu.component.js'
 
 const Header = ({ meetupName, displayVideosLink, meetupVideosUrl }) => (
   <StaticQuery
