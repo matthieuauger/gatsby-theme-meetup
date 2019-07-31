@@ -50,8 +50,8 @@ module.exports = ({
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'JAMstack.paris',
-        short_name: 'JAMstack.paris',
+        name: meetupName,
+        short_name: meetupName,
         start_url: '/',
         background_color: '#F8F9F4',
         theme_color: '#4A4A4A',

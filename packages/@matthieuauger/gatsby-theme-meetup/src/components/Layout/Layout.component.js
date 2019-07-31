@@ -23,8 +23,8 @@ const Layout = ({ children }) => (
         <Helmet
           title={data.site.siteMetadata.meetupName}
           meta={[
-            { name: 'description', content: 'JAMstack.paris' },
-            { name: 'keywords', content: 'JAMstack, paris' },
+            { name: 'description', content: data.site.siteMetadata.meetupName },
+            { name: 'keywords', content: 'JAMstack, meetup' },
           ]}
           link={[
             { rel: 'shortcut icon', type: 'image/png', href: `${favicon}` },
