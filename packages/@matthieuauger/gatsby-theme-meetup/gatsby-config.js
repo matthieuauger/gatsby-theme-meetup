@@ -15,6 +15,7 @@ module.exports = ({
     PROPOSE_A_TALK: 'Proposer un talk  →',
     FETCH_VIDEOS: 'Parcourir les vidéos →',
     LAST_MEETUPS: 'Meetup précédents',
+    REGISTER_ON_MEETUP: "S'inscrire sur Meetup →",
   },
 }) => ({
   siteMetadata: {

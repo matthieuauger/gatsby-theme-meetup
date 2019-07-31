@@ -13,6 +13,7 @@ const Meetup = ({
   displayVideosLink,
   displayVideosTranslation,
   meetupVideosUrl,
+  registerOnMeetupTranslation,
   backgroundColor,
 }) => (
   <div className="meetup-container">
@@ -28,10 +29,6 @@ const Meetup = ({
               {dayjs(meetupInfo.local_date)
                 .locale('fr')
                 .format('dddd DD MMMM YYYY')}
-            </div>
-            <div>19h</div>
-            <div>
-              {meetupType === 'UPCOMING' ? `Entrée libre, sur inscription` : ``}
             </div>
           </div>
           <div className="meetup-informations-basic-place">
@@ -53,7 +50,7 @@ const Meetup = ({
         <div className="meetup-subscribe">
           <Button
             url={meetupInfo.link}
-            text="S'inscrire sur Meetup →"
+            text={registerOnMeetupTranslation}
             type="primary"
           />
         </div>

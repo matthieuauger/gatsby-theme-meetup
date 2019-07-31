@@ -43,6 +43,9 @@ const IndexPage = ({ data }) => {
             data.site.siteMetadata.translations.FETCH_VIDEOS
           }
           meetupVideosUrl={data.site.siteMetadata.meetupVideosUrl}
+          registerOnMeetupTranslation={
+            data.site.siteMetadata.translations.REGISTER_ON_MEETUP
+          }
         />
       )}
       <TextBlock textBlockHTML={data.whatIsJAMstackTextBlock.html} />
@@ -60,6 +63,9 @@ const IndexPage = ({ data }) => {
               data.site.siteMetadata.translations.FETCH_VIDEOS
             }
             meetupVideosUrl={data.site.siteMetadata.meetupVideosUrl}
+            registerOnMeetupTranslation={
+              data.site.siteMetadata.translations.REGISTER_ON_MEETUP
+            }
           />
         )
       })}
@@ -79,6 +85,7 @@ export const query = graphql`
         translations {
           LAST_MEETUPS
           FETCH_VIDEOS
+          REGISTER_ON_MEETUP
         }
       }
     }

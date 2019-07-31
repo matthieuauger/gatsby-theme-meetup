@@ -13,7 +13,8 @@ module.exports = {
         translations: {
           PROPOSE_A_TALK: "Propose a talk →",
           FETCH_VIDEOS: "See videos →",
-          LAST_MEETUPS: "Last meetups"
+          LAST_MEETUPS: "Last meetups",
+          REGISTER_ON_MEETUP: "Register on Meetup →"
         }
       }
     }
