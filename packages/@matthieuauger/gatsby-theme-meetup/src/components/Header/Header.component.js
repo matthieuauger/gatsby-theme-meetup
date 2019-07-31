@@ -11,12 +11,6 @@ const Header = () => (
         site {
           siteMetadata {
             meetupName
-            displayVideosLink
-            meetupVideosUrl
-            translations {
-              FETCH_VIDEOS
-              PROPOSE_A_TALK
-            }
           }
         }
       }
