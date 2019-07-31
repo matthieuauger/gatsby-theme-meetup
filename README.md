@@ -6,10 +6,10 @@
 </h1>
 
 <h3 align="center">
-  ⚛️ 🤝 🥤
+  ⚛️ :handshake: :coffee:
 </h3>
 <h3 align="center">
-  Launch your meetup website in minutes 🚀
+  Launch your meetup website in minutes :rocket:
 </h3>
 <p align="center">
   Gatsby Theme Meetup is an open source theme based on Gatsby that helps meetup organizers create blazing fast meetup sites to share to their community.
@@ -30,7 +30,7 @@
 <h3 align="center">
   <a href="https://jamstack.paris/">Demo</a>
   <span> · </span>
-  <a href="#-get-your-meetup-site-up-and-running-in-5-minutes">Quickstart</a>
+  <a href="#rocket-get-your-meetup-site-up-and-running-in-5-minutes">Quickstart</a>
   <span> · </span>
   <a href="https://gatsbyjs.org/docs/">Learn Gatsby</a>
   <span> · </span>
@@ -46,7 +46,7 @@ Gatsby Theme Meetup is a simple theme for meetup organizers. Theme features incl
 
 - **Translatable texts** for call to action
 
-## 🚀 Get Your Meetup Site Up and Running in 5 Minutes
+## :rocket: Get Your Meetup Site Up and Running in 5 Minutes
 
 You can get a new Meetup Gatsby site up and running on your local dev environment in 5 minutes with these four steps:
 
@@ -86,11 +86,11 @@ You can get a new Meetup Gatsby site up and running on your local dev environmen
 
 At this point, you’ve got a fully functional Meetup website. For now, it fetchs and dislpay content for the JAMstack Paris Meetup.
 
-## 👨‍🎨 Configure site for your meetup
+## :paintbrush: Configure site for your meetup
 
 The theme offers simple configurations directly by modifying the `gatsby-config.js` file in your site directory.
 
-☝️️️️️ **Beware, when updating your gatsby-config.js file, you must stop and start again `gatsby develop` so it can source the new configuration** ☝️
+:point_up: **Beware, when updating your gatsby-config.js file, you must stop and start again `gatsby develop` so it can source the new configuration** :point_up:
 
 - **Meetup Name** (_default: JAMstack Paris_)
 - **Homepage Headline** (_default: Le meetup bimestriel autour de la JAMstack_)
@@ -124,9 +124,9 @@ module.exports = {
 };
 ```
 
-☝️️️️️ **Beware, when updating your gatsby-config.js file, you must stop and start again `gatsby develop` so it can source the new configuration** ☝️
+:point_up: **Beware, when updating your gatsby-config.js file, you must stop and start again `gatsby develop` so it can source the new configuration** :point_up:
 
-## ✍🏻 Personalize Editorial Content
+## :writing_hand: Personalize Editorial Content
 
 Editorial content consists of three blocks on the website.
 
@@ -178,13 +178,13 @@ To override these:
 
 4. **Edit the content in your code editor. Beware not to change the _type_ field at the top of the markdown files.**
 
-☝️️️️️ **Beware, when updating your gatsby-config.js file, you must stop and start again `gatsby develop` so it can source the new configuration** ☝️
+:point_up: **Beware, when updating your gatsby-config.js file, you must stop and start again `gatsby develop` so it can source the new configuration** :point_up:
 
-## 💄 Change Logo
+## :lipstick: Change Logo
 
 Look at the [Advanced configuration](-advanced-configuration) section.
 
-## 🧪 Advanced configuration
+## :ghost: Advanced configuration
 
 For more advanced configurations, you can use [Component Shadowing](https://www.gatsbyjs.org/blog/2019-04-29-component-shadowing/).
 For example to override the logo.
@@ -203,9 +203,9 @@ For example to override the logo.
 
 3. **Edit the component and use an image of your choice**
 
-☝️️️️️ **Beware, when shadowing compopnents, you must stop and start again `gatsby develop` so it can load your shadowed components** ☝️
+:point_up: **Beware, when shadowing compopnents, you must stop and start again `gatsby develop` so it can load your shadowed components** :point_up:
 
-## 🤝 How to Contribute
+## :handshake: How to Contribute
 
 Whether you're helping us fix bugs, improve the docs, or spread the word, we'd love to have you as part of the Gatsby community! :muscle::purple_heart:
 
