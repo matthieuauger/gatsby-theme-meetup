@@ -24,8 +24,8 @@ const Meetup = ({
       <div className="meetup-informations">
         <div className="meetup-informations-basic">
           <div className="meetup-informations-basic-date">
-            {/* TODO: hookup the real date with meetupInfo.date (needs parsing)*/}
             <div className="meetup-informations-basic-highlight">
+              {/* TODO: dynamic locale */}
               {dayjs(meetupInfo.local_date)
                 .locale('fr')
                 .format('dddd DD MMMM YYYY')}
