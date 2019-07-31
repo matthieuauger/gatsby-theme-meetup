@@ -24,10 +24,10 @@ const Layout = ({ children }) => (
           title={data.site.siteMetadata.meetupName}
           meta={[
             { name: 'description', content: data.site.siteMetadata.meetupName },
-            { name: 'keywords', content: 'JAMstack, meetup' },
+            { name: 'keywords', content: 'meetup' }, //TODO dynamize keywords
           ]}
           link={[
-            { rel: 'shortcut icon', type: 'image/png', href: `${favicon}` },
+            { rel: 'shortcut icon', type: 'image/png', href: `${favicon}` }, //TODO specific component for favicon to ease shadowing
           ]}
         >
           <html lang="en" />
