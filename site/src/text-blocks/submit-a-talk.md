@@ -13,6 +13,6 @@ You wrote / participated in an open-source project related to the ecosystem?
 Don't wait, offer a talk! We will be happy to assist you in the choice of the subject, the preparation of the speech and the public expression if you wish.
 
 <div class="call-to-action">
-  <a type="neutral" href="https://docs.google.com/forms/d/e/1FAIpQLScYo0W4QAkRHLj0fS_TXZXFuSUJ_cRlmyJCeRTPDQVt9RBNog/viewform" class="Buttonstyle__StyledButton-ltfqg3-0 buJYZG">Submit a talk →
+  <a type="neutral" href="https://twitter.com/philhawksworth" class="Buttonstyle__StyledButton-ltfqg3-0 buJYZG">Contact Phil on Twitter →
   </a>
 </div>

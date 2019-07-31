@@ -95,8 +95,8 @@ The theme offers simple configurations directly by modifying the `gatsby-config.
 - **Meetup Name** (_default: JAMstack Paris_)
 - **Homepage Headline** (_default: Le meetup bimestriel autour de la JAMstack_)
 - **Meetup.com group URL**. You can get it in [the URL of your Meetup](https://www.meetup.com/fr-FR/JAMstack-paris/) (_default: jamstack-paris_)
-- **Videos Link** (_by default, display a link to the [JAMstack Paris Youtube Page](https://www.youtube.com/channel/UC66eQOycjMnaqzpbRUhEK2w)_)
-- **Meetup Proposal Link** (_by default, display a link to the [JAMstack Paris form](https://docs.google.com/forms/d/e/1FAIpQLScYo0W4QAkRHLj0fS_TXZXFuSUJ_cRlmyJCeRTPDQVt9RBNog/viewform)_)
+- **Videos Url** (_by default, redirect to the [JAMstack Paris Youtube Page](https://www.youtube.com/channel/UC66eQOycjMnaqzpbRUhEK2w)_)
+- **Talk Proposal Url** (_by default, redirect to the [JAMstack Paris form](https://docs.google.com/forms/d/e/1FAIpQLScYo0W4QAkRHLj0fS_TXZXFuSUJ_cRlmyJCeRTPDQVt9RBNog/viewform)_)
 
 Here is an example of a `gatsby-config.js` configuration for the JAMstack London Meetup.
 
@@ -111,6 +111,7 @@ module.exports = {
         meetupDotComGroupUrlName: "JAMstack-London",
         displayVideosLink: false,
         //meetupVideosUrl = 'https://www.youtube.com/channel/UC66eQOycjMnaqzpbRUhEK2w'
+        talkProposalUrl: "#",
         //textBlocksPath: `${__dirname}/src/text-blocks`,
         translations: {
           PROPOSE_A_TALK: "Propose a talk →",
