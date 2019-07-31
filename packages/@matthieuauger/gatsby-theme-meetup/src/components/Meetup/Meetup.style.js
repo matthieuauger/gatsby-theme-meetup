@@ -99,6 +99,7 @@ const StyledMeetup = styled.div`
     }
 
     .meetup-informations-talks p {
+      word-break: break-word;
       border-bottom: 1px solid #b3b3b3;
       padding-bottom: 20px;
     }
