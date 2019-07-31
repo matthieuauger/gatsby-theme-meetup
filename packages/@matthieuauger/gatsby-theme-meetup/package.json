@@ -1,7 +1,7 @@
 {
   "name": "@matthieuauger/gatsby-theme-meetup",
   "description": " Gatsby Meetup Theme",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "author": "Matthieu Auger <matthieua@theodo.fr>",
   "contributors": [
     "Nicolas Goutay <nicolasgo@theodo.fr>"
