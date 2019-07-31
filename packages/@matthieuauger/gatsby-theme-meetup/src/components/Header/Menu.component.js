@@ -11,6 +11,7 @@ const Menu = () => (
             meetupName
             displayVideosLink
             meetupVideosUrl
+            talkProposalUrl
             translations {
               FETCH_VIDEOS
               PROPOSE_A_TALK
@@ -32,7 +33,7 @@ const Menu = () => (
         )}
         <li>
           <Button
-            url="https://docs.google.com/forms/d/e/1FAIpQLScYo0W4QAkRHLj0fS_TXZXFuSUJ_cRlmyJCeRTPDQVt9RBNog/viewform"
+            url={data.site.siteMetadata.talkProposalUrl}
             text={data.site.siteMetadata.translations.PROPOSE_A_TALK}
             type="primary"
           />

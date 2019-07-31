@@ -8,6 +8,7 @@ module.exports = {
         meetupDotComGroupUrlName: "JAMstack-London",
         displayVideosLink: false,
         //meetupVideosUrl = 'https://www.youtube.com/channel/UC66eQOycjMnaqzpbRUhEK2w'
+        talkProposalUrl: "#",
         textBlocksPath: `${__dirname}/src/text-blocks`,
         translations: {
           PROPOSE_A_TALK: "Propose a talk →",
