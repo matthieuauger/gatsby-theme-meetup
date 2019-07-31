@@ -4,7 +4,7 @@ import MeetupLogo from './MeetupLogo.component.js'
 import StyledHeader from './Header.style'
 import Menu from './Menu.component.js'
 
-const Header = ({ meetupName, displayVideosLink, meetupVideosUrl }) => (
+const Header = () => (
   <StaticQuery
     query={graphql`
       query SiteMetadataQuery {
