@@ -10,6 +10,7 @@ module.exports = {
         //meetupVideosUrl = 'https://www.youtube.com/channel/UC66eQOycjMnaqzpbRUhEK2w'
         talkProposalUrl: "#",
         textBlocksPath: `${__dirname}/src/text-blocks`,
+        dateFormat: `dddd DD MMMM YYYY`,
         translations: {
           PROPOSE_A_TALK: "Propose a talk →",
           FETCH_VIDEOS: "See videos →",

@@ -11,6 +11,7 @@ module.exports = ({
   displayTalkProposalLink = true,
   talkProposalUrl = 'https://docs.google.com/forms/d/e/1FAIpQLScYo0W4QAkRHLj0fS_TXZXFuSUJ_cRlmyJCeRTPDQVt9RBNog/viewform',
   textBlocksPath = `${__dirname}/src/text-blocks`,
+  dateFormat = `DD/MM/YYYY`, //TODO manage locales
   translations = {
     PROPOSE_A_TALK: 'Proposer un talk  →',
     FETCH_VIDEOS: 'Parcourir les vidéos →',
@@ -27,6 +28,7 @@ module.exports = ({
     meetupVideosUrl: meetupVideosUrl,
     displayTalkProposalLink: displayTalkProposalLink,
     talkProposalUrl: talkProposalUrl,
+    dateFormat: dateFormat,
     translations: translations,
   },
   plugins: [

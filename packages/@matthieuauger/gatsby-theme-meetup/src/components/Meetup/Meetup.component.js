@@ -1,6 +1,5 @@
 import React from 'react'
 import dayjs from 'dayjs'
-import 'dayjs/locale/fr'
 import StyledMeetup from './Meetup.style'
 
 import Button from '../Button'
@@ -15,6 +14,7 @@ const Meetup = ({
   meetupVideosUrl,
   registerOnMeetupTranslation,
   backgroundColor,
+  dateFormat,
 }) => (
   <div className="meetup-container">
     <StyledMeetup backgroundColor={backgroundColor}>
@@ -25,10 +25,7 @@ const Meetup = ({
         <div className="meetup-informations-basic">
           <div className="meetup-informations-basic-date">
             <div className="meetup-informations-basic-highlight">
-              {/* TODO: dynamic locale */}
-              {dayjs(meetupInfo.local_date)
-                .locale('fr')
-                .format('dddd DD MMMM YYYY')}
+              {dayjs(meetupInfo.local_date).format(dateFormat)}
             </div>
           </div>
           <div className="meetup-informations-basic-place">

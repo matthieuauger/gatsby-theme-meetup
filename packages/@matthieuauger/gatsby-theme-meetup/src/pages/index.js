@@ -46,6 +46,7 @@ const IndexPage = ({ data }) => {
           registerOnMeetupTranslation={
             data.site.siteMetadata.translations.REGISTER_ON_MEETUP
           }
+          dateFormat={data.site.siteMetadata.dateFormat}
         />
       )}
       <TextBlock textBlockHTML={data.whatIsJAMstackTextBlock.html} />
@@ -66,6 +67,7 @@ const IndexPage = ({ data }) => {
             registerOnMeetupTranslation={
               data.site.siteMetadata.translations.REGISTER_ON_MEETUP
             }
+            dateFormat={data.site.siteMetadata.dateFormat}
           />
         )
       })}
@@ -87,6 +89,7 @@ export const query = graphql`
           FETCH_VIDEOS
           REGISTER_ON_MEETUP
         }
+        dateFormat
       }
     }
     meetupGroup {
