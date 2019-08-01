@@ -116,7 +116,8 @@ module.exports = {
         translations: {
           PROPOSE_A_TALK: "Propose a talk →",
           FETCH_VIDEOS: "See videos →",
-          LAST_MEETUPS: "Last meetups"
+          LAST_MEETUPS: "Last meetups",
+          REGISTER_ON_MEETUP: "Register on Meetup →"
         }
       }
     }
@@ -157,6 +158,7 @@ To override these:
 
 3. **Add option in the configuration to tell Gatsby to source content from your directory**
 
+   <!-- prettier-ignore -->
    ```javascript
    module.exports = {
      plugins: [
@@ -166,7 +168,7 @@ To override these:
            //
            // ... your configuration here
            //
-           textBlocksPath: `${__dirname}/src/text-blocks`
+           textBlocksPath: `${__dirname}/src/text-blocks`,
            //
            // ... you configuration here
            //
@@ -176,7 +178,7 @@ To override these:
    };
    ```
 
-4. **Edit the content in your code editor. Beware not to change the _type_ field at the top of the markdown files.**
+4. **Edit the copied markdown files in your code editor. Beware not to change the _type_ field at the top of the markdown files.**
 
 :point_up: **Beware, when updating your gatsby-config.js file, you must stop and start again `gatsby develop` so it can source the new configuration** :point_up:
 
