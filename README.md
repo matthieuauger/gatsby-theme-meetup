@@ -40,7 +40,7 @@
 
 Gatsby Theme Meetup is a simple theme for meetup organizers. Theme features includes
 
-- **Past and futures meetup** fetched from [Meetup](https://www.meetup.com) thanks to [https://github.com/phacks/gatsby-source-meetup](gatsby-source-meetup)
+- **Past and futures meetup** fetched from [Meetup](https://www.meetup.com) thanks to [gatsby-source-meetup](https://github.com/phacks/gatsby-source-meetup)
 
 - **Configurable** meetup name, CFP form, videos link and editorial content powered by markdown
 
