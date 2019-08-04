@@ -77,6 +77,9 @@ You can get a new Meetup Gatsby site up and running on your local dev environmen
      ]
    };
    ```
+3. **Set API key**
+
+   Add `MEETUP_API_KEY` env variable from here: https://secure.meetup.com/meetup_api/key/
 
 4. **Start the site in `develop` mode.**
 
