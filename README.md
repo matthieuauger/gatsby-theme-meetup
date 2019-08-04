@@ -58,13 +58,13 @@ You can get a new Meetup Gatsby site up and running on your local dev environmen
    npm init -y
    ```
 
-2. **Install Gatsby, Gatsby Theme Meetup and its dependencies.**
+1. **Install Gatsby, Gatsby Theme Meetup and its dependencies.**
 
    ```sh
    npm install react react-dom gatsby @matthieuauger/gatsby-theme-meetup
    ```
 
-3. **Configure Gatsby to use the Gatsby Theme Meetup**
+1. **Configure Gatsby to use the Gatsby Theme Meetup**
 
    Open the `my-awesome-meetup-website` directory in your code editor of choice, create a `gatsby-config.js` file at the root with following lines and save your changes
 
@@ -77,11 +77,12 @@ You can get a new Meetup Gatsby site up and running on your local dev environmen
      ]
    };
    ```
-3. **Set API key**
+
+1. **Set API key**
 
    Add `MEETUP_API_KEY` env variable from here: https://secure.meetup.com/meetup_api/key/
 
-4. **Start the site in `develop` mode.**
+1. **Start the site in `develop` mode.**
 
    ```sh
    node_modules/.bin/gatsby develop # or install Gatsby CLI globally with npm install -g gatsby-cli
@@ -138,10 +139,10 @@ Editorial content consists of three blocks on the website.
 1. The main text at the top of the page (usually a description of your Meetup but can be whatever)
    ![Top text Editorial Content](./assets/editorial-content-what-is-jamstack.png)
 
-2. The main text at the bottom of the page (usually a call to action for talk proposals)
+1. The main text at the bottom of the page (usually a call to action for talk proposals)
    ![Bottom text Editorial Content](./assets/editorial-content-submit-a-talk.png)
 
-3. The footer (usually some credits or sponsorship links)
+1. The footer (usually some credits or sponsorship links)
    ![Bottom text Editorial Content](./assets/editorial-content-footer.png)
 
 These contents are [markdown files](/packages/%40matthieuauger/gatsby-theme-meetup/src/text-blocks) sourced by Gatsby during build time.
@@ -154,13 +155,13 @@ To override these:
    mkdir -p src/text-blocks
    ```
 
-2. **Copy the [Markdown files](/packages/%40matthieuauger/gatsby-theme-meetup/src/text-blocks) inside your site directory.**
+1. **Copy the [Markdown files](/packages/%40matthieuauger/gatsby-theme-meetup/src/text-blocks) inside your site directory.**
 
    ```shell
    cp node_modules/@matthieuauger/gatsby-theme-meetup/src/text-blocks/*.md src/text-blocks
    ```
 
-3. **Add option in the configuration to tell Gatsby to source content from your directory**
+1. **Add option in the configuration to tell Gatsby to source content from your directory**
 
    <!-- prettier-ignore -->
    ```javascript
@@ -182,7 +183,7 @@ To override these:
    };
    ```
 
-4. **Edit the copied markdown files in your code editor. Beware not to change the _type_ field at the top of the markdown files.**
+1. **Edit the copied markdown files in your code editor. Beware not to change the _type_ field at the top of the markdown files.**
 
 :point_up: **Beware, when updating your gatsby-config.js file, you must stop and start again `gatsby develop` so it can source the new configuration** :point_up:
 
@@ -201,13 +202,13 @@ For example to override the logo.
    mkdir -p src/@matthieuauger/gatsby-theme-meetup/components/Header
    ```
 
-2. **Copy the [base Logo component](/packages/%40matthieuauger/gatsby-theme-meetup/src/text-blocks) inside your site directory.**
+1. **Copy the [base Logo component](/packages/%40matthieuauger/gatsby-theme-meetup/src/text-blocks) inside your site directory.**
 
    ```shell
    cp node_modules/@matthieuauger/gatsby-theme-meetup/src/components/Header/MeetupLogo.component.js src/@matthieuauger/gatsby-theme-meetup/components/Header
    ```
 
-3. **Edit the component and use an image of your choice**
+1. **Edit the component and use an image of your choice**
 
 :point_up: **Beware, when shadowing compopnents, you must stop and start again `gatsby develop` so it can load your shadowed components** :point_up:
 
