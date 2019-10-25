@@ -202,7 +202,7 @@ For example to override the logo.
    mkdir -p src/@matthieuauger/gatsby-theme-meetup/components/Header
    ```
 
-1. **Copy the [base Logo component](/packages/%40matthieuauger/gatsby-theme-meetup/src/text-blocks) inside your site directory.**
+1. **Copy the [base Logo component](/packages/%40matthieuauger/gatsby-theme-meetup/src/components/Header/MeetupLogo.component.js) inside your site directory.**
 
    ```shell
    cp node_modules/@matthieuauger/gatsby-theme-meetup/src/components/Header/MeetupLogo.component.js src/@matthieuauger/gatsby-theme-meetup/components/Header
