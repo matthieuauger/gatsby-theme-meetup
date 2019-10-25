@@ -189,7 +189,7 @@ To override these:
 
 ## :lipstick: Change Logo
 
-Look at the [Advanced configuration](-advanced-configuration) section.
+Look at the [Advanced configuration](#ghost-advanced-configuration) section.
 
 ## :ghost: Advanced configuration
 
