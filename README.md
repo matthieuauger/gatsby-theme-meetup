@@ -123,7 +123,9 @@ module.exports = {
           FETCH_VIDEOS: "See videos →",
           LAST_MEETUPS: "Last meetups",
           REGISTER_ON_MEETUP: "Register on Meetup →"
-        }
+        },
+        currentMeetupColor: "#EFCC74",
+        pastMeetupColors: ["#E6BB91", "#DDDEC4", "#F3DBD1"]
       }
     }
   ]

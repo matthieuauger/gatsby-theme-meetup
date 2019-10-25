@@ -7,9 +7,6 @@ import Layout from '../components/Layout'
 import Meetup from '../components/Meetup'
 import TextBlock from '../components/TextBlock'
 
-let currentMeetupColor = '#F3DBD1'
-let pastMeetupColors = ['#DDDEC4', '#E6BB91', '#EFCC74']
-
 /**
  * If there is no upcoming meetup, return `null`
  * Else, return the meetup in the future closest to today by sorting
@@ -37,7 +34,7 @@ const IndexPage = ({ data }) => {
         <Meetup
           meetupInfo={nextMeetup}
           meetupType="UPCOMING"
-          backgroundColor={currentMeetupColor}
+          backgroundColor={data.site.siteMetadata.currentMeetupColor}
           displayVideosLink={data.site.siteMetadata.displayVideosLink}
           displayVideosTranslation={
             data.site.siteMetadata.translations.FETCH_VIDEOS
@@ -58,7 +55,12 @@ const IndexPage = ({ data }) => {
             key={pastMeetup.id}
             meetupInfo={pastMeetup}
             meetupType="PAST"
-            backgroundColor={pastMeetupColors[index]}
+            backgroundColor={
+              data.site.siteMetadata.pastMeetupColors[
+                // loop and cycle over configured colors
+                index % data.site.siteMetadata.pastMeetupColors.length
+              ]
+            }
             displayVideosLink={data.site.siteMetadata.displayVideosLink}
             displayVideosTranslation={
               data.site.siteMetadata.translations.FETCH_VIDEOS
@@ -90,6 +92,8 @@ export const query = graphql`
           REGISTER_ON_MEETUP
         }
         dateFormat
+        currentMeetupColor
+        pastMeetupColors
       }
     }
     meetupGroup {
