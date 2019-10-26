@@ -187,6 +187,10 @@ To override these:
 
 :point_up: **Beware, when updating your gatsby-config.js file, you must stop and start again `gatsby develop` so it can source the new configuration** :point_up:
 
+## :lipstick: Change Logo
+
+Look at the [Advanced configuration](https://github.com/matthieuauger/gatsby-theme-meetup#ghost-advanced-configuration) section.
+
 ## :ghost: Advanced configuration
 
 For more advanced configurations, you can use [Component Shadowing](https://www.gatsbyjs.org/blog/2019-04-29-component-shadowing/).
