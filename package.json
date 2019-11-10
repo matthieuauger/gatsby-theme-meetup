@@ -11,6 +11,7 @@
   "private": true,
   "workspaces": [
     "jamstack-london",
+    "jamstack-paris",
     "packages/@matthieuauger/gatsby-theme-meetup"
   ]
 }
