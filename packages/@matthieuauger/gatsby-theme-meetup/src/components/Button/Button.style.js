@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const StyledButton = styled.a`
+const StyledButton = styled.div`
   ${({ type }) => {
     const primaryColor = '#ED1C40'
     const lightGrey = '#4A4A4A'
@@ -18,9 +18,9 @@ const StyledButton = styled.a`
       },
     }
     return `
-    {
+    a {
       display: block;
-      padding: 18px 48px;
+      padding: 18px 45px;
       font-size: 1.3rem;
       font-weight: bold;
       color: ${lightGrey};
@@ -29,7 +29,7 @@ const StyledButton = styled.a`
       box-shadow: none;
     }
 
-    &:hover {
+    a:hover {
       background-color: ${colorScheme[type].hoverBackgroundColor};
       color: ${lightColor}; 
     }
