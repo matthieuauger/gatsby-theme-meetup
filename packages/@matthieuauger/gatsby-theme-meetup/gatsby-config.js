@@ -18,6 +18,8 @@ module.exports = ({
     LAST_MEETUPS: 'Meetup précédents',
     REGISTER_ON_MEETUP: "S'inscrire sur Meetup →",
   },
+  currentMeetupColor = '#F3DBD1',
+  pastMeetupColors = ['#DDDEC4', '#E6BB91', '#EFCC74'],
 }) => ({
   siteMetadata: {
     /* custom metadata to be injected into pages */
@@ -30,6 +32,8 @@ module.exports = ({
     talkProposalUrl: talkProposalUrl,
     dateFormat: dateFormat,
     translations: translations,
+    currentMeetupColor: currentMeetupColor,
+    pastMeetupColors: pastMeetupColors,
   },
   plugins: [
     'gatsby-plugin-react-helmet',

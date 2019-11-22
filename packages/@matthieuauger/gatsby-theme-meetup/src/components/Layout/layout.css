@@ -1,8 +1,8 @@
 body {
   background-color: #fcfcfc;
   box-sizing: content-box;
-  color: #4A4A4A;
-  font-family: "IBM Plex Sans", "Avenir Next", sans-serif;
+  color: #4a4a4a;
+  font-family: 'IBM Plex Sans', 'Avenir Next', sans-serif;
   margin: 0;
 }
 
@@ -10,7 +10,8 @@ body {
   padding: 20px 60px;
 }
 
-h1, h2 {
+h1,
+h2 {
   margin-top: 0;
   padding: 0px 100px;
 }
@@ -27,8 +28,19 @@ h1 {
   line-height: 1.6em;
 }
 
+.gallery {
+  padding: 0 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.gallery__picture {
+  margin-bottom: 20px;
+}
+
 a {
-  color: #4A4A4A;
+  color: #4a4a4a;
   cursor: pointer;
 }
 
@@ -45,7 +57,8 @@ a {
     padding: 20px 30px;
   }
 
-  h1, h2 {
+  h1,
+  h2 {
     text-align: center;
     padding: 0 20px;
   }

@@ -78,10 +78,6 @@ You can get a new Meetup Gatsby site up and running on your local dev environmen
    };
    ```
 
-1. **Set API key**
-
-   Add `MEETUP_API_KEY` env variable from here: https://secure.meetup.com/meetup_api/key/
-
 1. **Start the site in `develop` mode.**
 
    ```sh
@@ -123,7 +119,9 @@ module.exports = {
           FETCH_VIDEOS: "See videos →",
           LAST_MEETUPS: "Last meetups",
           REGISTER_ON_MEETUP: "Register on Meetup →"
-        }
+        },
+        currentMeetupColor: "#EFCC74",
+        pastMeetupColors: ["#E6BB91", "#DDDEC4", "#F3DBD1"]
       }
     }
   ]
@@ -189,7 +187,7 @@ To override these:
 
 ## :lipstick: Change Logo
 
-Look at the [Advanced configuration](https://github.com/matthieuauger/gatsby-theme-meetup#ghost-advanced-configuration) section.
+Look at the [Advanced configuration](#ghost-advanced-configuration) section.
 
 ## :ghost: Advanced configuration
 
@@ -202,7 +200,7 @@ For example to override the logo.
    mkdir -p src/@matthieuauger/gatsby-theme-meetup/components/Header
    ```
 
-1. **Copy the [base Logo component](/packages/%40matthieuauger/gatsby-theme-meetup/src/text-blocks) inside your site directory.**
+1. **Copy the [base Logo component](/packages/%40matthieuauger/gatsby-theme-meetup/src/components/Header/MeetupLogo.component.js) inside your site directory.**
 
    ```shell
    cp node_modules/@matthieuauger/gatsby-theme-meetup/src/components/Header/MeetupLogo.component.js src/@matthieuauger/gatsby-theme-meetup/components/Header
@@ -210,7 +208,7 @@ For example to override the logo.
 
 1. **Edit the component and use an image of your choice**
 
-:point_up: **Beware, when shadowing compopnents, you must stop and start again `gatsby develop` so it can load your shadowed components** :point_up:
+:point_up: **Beware, when shadowing components, you must stop and start again `gatsby develop` so it can load your shadowed components** :point_up:
 
 ## :handshake: How to Contribute
 
@@ -218,7 +216,7 @@ Whether you're helping us fix bugs, improve the docs, or spread the word, we'd l
 
 This repository contains the published package on NPM but also a fully functional development environment with Yarn Workspaces.
 
-Pull the sources, run `yarn install`, `yarn workspace site gatsby develop` and you're ready to go.
+Pull the sources, run `yarn install`, `yarn workspace jamstack-london-demo-website gatsby develop` and you're ready to go.
 
 I will read give feedbacks to new Pull Request as fast as possible.
 

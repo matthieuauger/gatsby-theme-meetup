@@ -30,10 +30,10 @@ const Meetup = ({
           </div>
           <div className="meetup-informations-basic-place">
             <div className="meetup-informations-basic-highlight">
-              {meetupInfo.venue.name}
+              {meetupInfo.venue !== null && meetupInfo.venue.name}
             </div>
-            <div>{meetupInfo.venue.address_1}</div>
-            <div>{meetupInfo.venue.city}</div>
+            <div>{meetupInfo.venue !== null && meetupInfo.venue.address_1}</div>
+            <div>{meetupInfo.venue !== null && meetupInfo.venue.city}</div>
           </div>
         </div>
         <div

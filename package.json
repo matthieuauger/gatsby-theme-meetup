@@ -10,7 +10,8 @@
   "license": "MIT",
   "private": true,
   "workspaces": [
-    "site",
+    "jamstack-london-demo-website",
+    "jamstack-paris-demo-website",
     "packages/@matthieuauger/gatsby-theme-meetup"
   ]
 }
