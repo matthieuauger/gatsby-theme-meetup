@@ -220,7 +220,7 @@ Whether you're helping us fix bugs, improve the docs, or spread the word, we'd l
 
 This repository contains the published package on NPM but also a fully functional development environment with Yarn Workspaces.
 
-Pull the sources, run `yarn install`, `yarn workspace site gatsby develop` and you're ready to go.
+Pull the sources, run `yarn install`, `yarn workspace jamstack-london-demo-website gatsby develop` and you're ready to go.
 
 I will read give feedbacks to new Pull Request as fast as possible.
 
