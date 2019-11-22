@@ -208,7 +208,7 @@ For example to override the logo.
 
 1. **Edit the component and use an image of your choice**
 
-:point_up: **Beware, when shadowing compopnents, you must stop and start again `gatsby develop` so it can load your shadowed components** :point_up:
+:point_up: **Beware, when shadowing components, you must stop and start again `gatsby develop` so it can load your shadowed components** :point_up:
 
 ## :handshake: How to Contribute
 
