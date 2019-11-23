@@ -15,6 +15,7 @@ module.exports = {
           PROPOSE_A_TALK: "Propose a talk →",
           FETCH_VIDEOS: "See videos →",
           LAST_MEETUPS: "Last meetups",
+          ALL_MEETUPS: "All meetups →",
           REGISTER_ON_MEETUP: "Register on Meetup →"
         },
         currentMeetupColor: "#EFCC74",
