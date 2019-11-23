@@ -64,7 +64,7 @@ const StyledMeetup = styled.div`
     padding: 0 60px;
   }
 
-  .meetup-subscribe a {
+  .meetup-subscribe * {
     margin-left: auto;
   }
 
