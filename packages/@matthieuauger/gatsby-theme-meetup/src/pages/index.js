@@ -61,6 +61,7 @@ const IndexPage = ({ data }) => {
           url="/meetup"
           text={data.site.siteMetadata.translations.ALL_MEETUPS}
           type="neutral"
+          internal="true"
         />
       </div>
       <TextBlock textBlockHTML={data.submitATalk.html} />
