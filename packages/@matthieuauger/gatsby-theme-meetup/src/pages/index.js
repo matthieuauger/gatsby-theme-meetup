@@ -1,38 +1,19 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import dayjs from 'dayjs'
 
 import Footer from '../components/Footer'
 import Layout from '../components/Layout'
 import Meetup from '../components/Meetup'
 import TextBlock from '../components/TextBlock'
 
-/**
- * If there is no upcoming meetup, return `null`
- * Else, return the meetup in the future closest to today by sorting
- * by ascending date and returning the first element
- */
-const getNextMeetup = meetups =>
-  meetups.length === 0
-    ? null
-    : meetups.sort((a, b) =>
-        dayjs(a.local_date).isBefore(dayjs(b.local_date)) ? -1 : 1
-      )[0]
-
 const IndexPage = ({ data }) => {
-  const upcomingMeetups = data.allMeetupEvent.edges.filter(
-    event => event.node.status === 'upcoming' || event.node.status === 'draft'
-  )
-  const nextMeetup = getNextMeetup(upcomingMeetups)
-  const pastMeetups = data.allMeetupEvent.edges.filter(
-    event => event.node.status === 'past'
-  )
+  const upcomingMeetup = getUpcomingMeetup(data.upcomingMeetupEvents)
   return (
     <Layout>
       <h1>{data.site.siteMetadata.meetupHomepageHeadline}</h1>
-      {nextMeetup && (
+      {upcomingMeetup && (
         <Meetup
-          meetupInfo={nextMeetup}
+          meetupInfo={upcomingMeetup}
           meetupType="UPCOMING"
           backgroundColor={data.site.siteMetadata.currentMeetupColor}
           displayVideosLink={data.site.siteMetadata.displayVideosLink}
@@ -49,7 +30,7 @@ const IndexPage = ({ data }) => {
       <TextBlock textBlockHTML={data.whatIsJAMstackTextBlock.html} />
 
       <h2>{data.site.siteMetadata.translations.LAST_MEETUPS}</h2>
-      {pastMeetups.map((pastMeetup, index) => {
+      {data.pastMeetupEvents.edges.map((pastMeetup, index) => {
         return (
           <Meetup
             key={pastMeetup.node.id}
@@ -79,6 +60,11 @@ const IndexPage = ({ data }) => {
   )
 }
 
+const getUpcomingMeetup = upcomingMeetupEventsData =>
+  upcomingMeetupEventsData.edges.length === 0
+    ? null
+    : upcomingMeetupEventsData.edges[0].node
+
 export const query = graphql`
   query {
     site {
@@ -96,7 +82,30 @@ export const query = graphql`
         pastMeetupColors
       }
     }
-    allMeetupEvent {
+    upcomingMeetupEvents: allMeetupEvent(
+      filter: { status: { eq: "upcoming" } }
+      sort: { fields: local_date, order: DESC }
+    ) {
+      edges {
+        node {
+          id
+          name
+          description
+          local_date
+          venue {
+            name
+            address_1
+            city
+          }
+          link
+          status
+        }
+      }
+    }
+    pastMeetupEvents: allMeetupEvent(
+      filter: { status: { eq: "past" } }
+      sort: { fields: local_date, order: DESC }
+    ) {
       edges {
         node {
           id
