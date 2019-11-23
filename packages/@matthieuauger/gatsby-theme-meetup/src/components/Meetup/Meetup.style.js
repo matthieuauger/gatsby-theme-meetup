@@ -49,6 +49,10 @@ const StyledMeetup = styled.div`
     margin: auto;
   }
 
+  .meetup-informations-talks img {
+    max-width: 100%;
+  }
+
   .meetup-informations-talks a {
     font-weight: bold;
     box-shadow: rgba(237, 28, 64, 0.4) 0px -5px 0px inset;
