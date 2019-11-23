@@ -20,12 +20,12 @@ const getNextMeetup = meetups =>
       )[0]
 
 const IndexPage = ({ data }) => {
-  const upcomingMeetups = data.meetupGroup.events.filter(
-    event => event.status === 'upcoming' || event.status === 'draft'
+  const upcomingMeetups = data.allMeetupEvent.edges.filter(
+    event => event.node.status === 'upcoming' || event.node.status === 'draft'
   )
   const nextMeetup = getNextMeetup(upcomingMeetups)
-  const pastMeetups = data.meetupGroup.events.filter(
-    event => event.status === 'past'
+  const pastMeetups = data.allMeetupEvent.edges.filter(
+    event => event.node.status === 'past'
   )
   return (
     <Layout>
@@ -52,8 +52,8 @@ const IndexPage = ({ data }) => {
       {pastMeetups.map((pastMeetup, index) => {
         return (
           <Meetup
-            key={pastMeetup.id}
-            meetupInfo={pastMeetup}
+            key={pastMeetup.node.id}
+            meetupInfo={pastMeetup.node}
             meetupType="PAST"
             backgroundColor={
               data.site.siteMetadata.pastMeetupColors[
@@ -96,21 +96,22 @@ export const query = graphql`
         pastMeetupColors
       }
     }
-    meetupGroup {
-      events {
-        id
-        name
-        description
-        local_date
-        venue {
+    allMeetupEvent {
+      edges {
+        node {
+          id
           name
-          address_1
-          city
+          description
+          local_date
+          venue {
+            name
+            address_1
+            city
+          }
+          link
+          status
         }
-        link
-        status
       }
-      name
     }
     whatIsJAMstackTextBlock: markdownRemark(
       frontmatter: { type: { eq: "what-is-jamstack" } }
