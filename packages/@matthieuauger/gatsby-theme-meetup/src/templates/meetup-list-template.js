@@ -69,11 +69,6 @@ export const query = graphql`
           name
           description
           local_date
-          venue {
-            name
-            address_1
-            city
-          }
           link
           status
         }

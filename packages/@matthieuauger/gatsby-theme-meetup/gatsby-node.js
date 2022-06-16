@@ -14,11 +14,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
               name
               description
               local_date
-              venue {
-                name
-                address_1
-                city
-              }
               link
               status
             }

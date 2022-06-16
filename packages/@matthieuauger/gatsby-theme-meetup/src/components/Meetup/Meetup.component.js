@@ -28,13 +28,6 @@ const Meetup = ({
               {dayjs(meetupInfo.local_date).format(dateFormat)}
             </div>
           </div>
-          <div className="meetup-informations-basic-place">
-            <div className="meetup-informations-basic-highlight">
-              {meetupInfo.venue !== null && meetupInfo.venue.name}
-            </div>
-            <div>{meetupInfo.venue !== null && meetupInfo.venue.address_1}</div>
-            <div>{meetupInfo.venue !== null && meetupInfo.venue.city}</div>
-          </div>
         </div>
         <div
           className="meetup-informations-talks"
@@ -71,11 +64,6 @@ Meetup.propTypes = {
     description: PropTypes.string.isRequired,
     link: PropTypes.string.isRequired,
     local_date: PropTypes.string.isRequired,
-    venue: PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      address_1: PropTypes.string.isRequired,
-      city: PropTypes.string.isRequired,
-    }).isRequired,
   }).isRequired,
 }
 
