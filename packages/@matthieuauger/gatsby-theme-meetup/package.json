@@ -19,7 +19,7 @@
     "gatsby-plugin-styled-components": "^3.0.5",
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-filesystem": "^2.0.4",
-    "gatsby-source-meetup": "^1.0.0",
+    "gatsby-source-meetup": "https://github.com/matthieuauger/gatsby-source-meetup",
     "gatsby-transformer-remark": "^2.6.9",
     "gatsby-transformer-sharp": "^2.1.4",
     "netlify-lambda": "^1.1.0",
