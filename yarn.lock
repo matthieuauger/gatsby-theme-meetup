@@ -5507,10 +5507,9 @@ gatsby-source-filesystem@^2.0.4:
     valid-url "^1.0.9"
     xstate "^4.6.7"
 
-gatsby-source-meetup@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/gatsby-source-meetup/-/gatsby-source-meetup-1.0.0.tgz#b4d039e182d678cf3a11d3da738adf9285d07b39"
-  integrity sha512-iOXTvECNmz2Elh+Siv8X7KYP/cKy3CiZJ+p+nv8qJtsZQ3o1CwW2Pq8bN+Q498tl9/++NkXokqZjyI2SRSf/fw==
+"gatsby-source-meetup@https://github.com/matthieuauger/gatsby-source-meetup":
+  version "1.1.0"
+  resolved "https://github.com/matthieuauger/gatsby-source-meetup#5b18055e97846ca28c5affc3e76937d861ad2048"
   dependencies:
     node-fetch "^2.2.1"
     query-string "^6.2.0"
